@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
+  resources :vote_details
+  resources :ip_lists
+  resources :categories
+  resources :categories
+  resources :questions
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  get '', to: 'home#index'
+  root 'home#index'
+
+  post 'updateVote' => 'vote_details#create', as: :makevote
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

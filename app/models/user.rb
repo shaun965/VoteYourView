@@ -1,5 +1,6 @@
 class User
   include Mongoid::Document
+  has_many :questions, dependent: :destroy
   #before_action :authenticate_user!
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

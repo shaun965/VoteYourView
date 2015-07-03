@@ -1,1 +1,15 @@
 <h1>Voteyourview.com</h1>
+<% @question.each do |f|%>
+  <pre>
+  Question: <%= f.text %>
+  Category <%= f.category %>
+  Yes: <%= f.vote_details.where(yes: true).count %>
+  No: <%= f.vote_details.where(yes: false).count %>
+  <%= link_to "Yes", makevote_path(question_id: f.id, yes: true), method: "post" %>    <%= link_to "No", makevote_path(question_id: f.id, yes: false), method: "post" %>
+
+  </pre>
+<% end %>
+
+<h5>Copyright&copyvoteyourview.com</h5>
+
+

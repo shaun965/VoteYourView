@@ -1,0 +1,17 @@
+<%= form_for(@ip_list) do |f| %>
+  <% if @ip_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ip_list.errors.count, "error") %> prohibited this ip_list from being saved:</h2>
+
+      <ul>
+      <% @ip_list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
