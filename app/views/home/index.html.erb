@@ -1,11 +1,23 @@
 <h1>Voteyourview.com</h1>
 <% @question.each do |f|%>
   <pre>
+  Posted by user: <%= f.user.email %>
   Question: <%= f.text %>
-  Category <%= f.category %>
+  Category: <%= f.category.category %> 
+  <%#= Category.where(category_id: f.category_id).category %>
   Yes: <%= f.vote_details.where(yes: true).count %>
   No: <%= f.vote_details.where(yes: false).count %>
-  <%= link_to "Yes", makevote_path(question_id: f.id, yes: true), method: "post" %>    <%= link_to "No", makevote_path(question_id: f.id, yes: false), method: "post" %>
+
+  <%= link_to "Individual question page", question_path(id: f.id.to_s), method: "get" %>
+
+  <% if f.vote_details.where(ip: @ip).exists? %>
+
+        You have already voted!
+
+  <% else %>
+    <%= link_to "Yes", makevote_path(question_id: f.id, yes: true, ip: @ip), method: "post" %>    
+    <%= link_to "No", makevote_path(question_id: f.id, yes: false, ip: @ip), method: "post" %>
+  <% end %>
 
   </pre>
 <% end %>

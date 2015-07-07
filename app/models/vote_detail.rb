@@ -3,5 +3,6 @@ class VoteDetail
   belongs_to :question
  
   field :yes,         type: Boolean
-  #field :no,          type: Integer, default: 0
+  field :ip,          type: String
+
 end

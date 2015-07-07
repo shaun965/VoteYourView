@@ -16,8 +16,18 @@
     <%= f.label :text %>
     <%= f.text_field :text, class: 'form-control' %>
 
-     <%= f.label :category %>
-    <%= f.text_field :category, class: 'form-control' %>
+    <%#= f.label :category %>
+    <%#= f.text_field :category, class: 'form-control' %>
+
+    <% @category.each do |a| %>
+
+    <% end %>
+
+    <%#= f.select :category, [@category.first.category] %>
+
+    <%= f.select(:category, @category.all.map {|p| [p.category]}, :prompt => "Select a Category") %>
+
+
 
     <%= f.submit %>
   </div>

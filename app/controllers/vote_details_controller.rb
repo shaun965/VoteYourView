@@ -26,11 +26,15 @@ class VoteDetailsController < ApplicationController
   # POST /vote_details
   # POST /vote_details.json
   def create
+
+    #if ip address already exists, send back an error message
+    
+    
     @vote_detail = VoteDetail.new(vote_detail_params)
 
     respond_to do |format|
       if @vote_detail.save
-        format.html { redirect_to root_url, notice: 'Vote detail was successfully created.' }
+        format.html { redirect_to :back, notice: 'You have successfully voted' }
         format.json { render :show, status: :created, location: @vote_detail }
       else
         format.html { render :new }
@@ -71,6 +75,6 @@ class VoteDetailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vote_detail_params
-      params.permit(:question_id, :yes)
+      params.permit(:question_id, :yes, :ip)
     end
 end

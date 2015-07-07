@@ -10,11 +10,15 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.json
   def show
+    #@question = Question_id: 
+    @ip = request.remote_ip
+    @question = Question.find_by(id: params[:id])
   end
 
   # GET /questions/new
   def new
     @question = Question.new
+    @category = Category.all
   end
 
   # GET /questions/1/edit
@@ -26,6 +30,13 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new(question_params)
     @question.user_id = current_user.id
+
+
+    #Very inefficient
+    @question.category_id = Category.find_by(category: question_params[:category]).id
+    #@question.category_name = question_params[:category]
+    #binding.pry
+    #@question.category_id = question_params[:category]
 
     respond_to do |format|
       if @question.save

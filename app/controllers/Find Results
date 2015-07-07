@@ -1,0 +1,86 @@
+Searching 223 files for "user_id"
+
+/Users/Shaun/Documents/projects/Rails Practice/vote/app/controllers/questions_controller.rb:
+   27    def create
+   28      @question = Question.new(question_params)
+   29:     @question.user_id = current_user.id
+   30  
+   31  
+
+/Users/Shaun/Documents/projects/Rails Practice/vote/log/development.log:
+ 3965  Completed 500 Internal Server Error in 52ms
+ 3966  
+ 3967: ActionView::Template::Error (undefined method `name' for #<Question _id: 5595cc4553686106d0000000, user_id: nil>):
+ 3968      13: 
+ 3969      14:   <div class="actions">
+ ....
+ 3998  Completed 500 Internal Server Error in 13ms
+ 3999  
+ 4000: ActionView::Template::Error (undefined method `name' for #<Question _id: 5595cc6953686106d0000001, user_id: nil>):
+ 4001      14:   <div class="actions">
+ 4002      15:     
+ ....
+ 6666    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=vote_details selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6030ms
+ 6667    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.2260ms
+ 6668:   MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=questions selector={"_id"=><BSON::ObjectId:0x70337887826660 data=5595d13053686106f7000000>} update={"$set"=>{"user_id"=><BSON::ObjectId:0x70337886993740 data=5595c16c536861057f000000>}} flags=[]
+ 6669                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9140ms
+ 6670  
+ ....
+ 6732    Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q20f8Hr07T/fQnB3pK4bvNo7ogLmpKZTaudr3PizRmAKohFr23fo16Qd/eGy3teo4upEYSPZCFrlN9pbhQspmg==", "question"=>{"text"=>"hello?", "category"=>"life"}, "commit"=>"Create Question"}
+ 6733    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70356130034640 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5160ms
+ 6734:   MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70356130036840 data=5595e2f65368610810000000>, "text"=>"hello?", "category"=>"life", "user_id"=><BSON::ObjectId:0x70356130030800 data=5595c5445368610603000000>}] flags=[]
+ 6735                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6050ms
+ 6736  Redirected to http://localhost:3000/
+ ....
+ 7282    Parameters: {"utf8"=>"✓", "authenticity_token"=>"qPbvz9z98fdBORnsW6wPwpG0avZagoltesYyQ3wfhimCvrU8z8g9ETGajGw95f2NkOcajAWLRZYmmfT704W6Cw==", "question"=>{"text"=>"as", "category"=>"as"}, "commit"=>"Create Question"}
+ 7283    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70121769036300 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.7040ms
+ 7284:   MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70121769072920 data=559b1ca953686102e3000000>, "text"=>"as", "category"=>"as", "user_id"=><BSON::ObjectId:0x70121768937620 data=5595c5445368610603000000>}] flags=[]
+ 7285                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 30.7760ms
+ 7286  Redirected to http://localhost:3000/
+ ....
+ 7379    Parameters: {"utf8"=>"✓", "authenticity_token"=>"e4BiCIUZUJnAvsPwXkv+kSv1E10mXw9SWQ1hchZQ+1NRyDj7liycf7AdVnA4AgzeKqZjJ3lWw6kFUqfKucrHcQ==", "question"=>{"text"=>"lccc", "category"=>"1ccc"}, "commit"=>"Create Question"}
+ 7380    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70121755746040 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5410ms
+ 7381:   MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70121782047560 data=559b1cc053686102e3000002>, "text"=>"lccc", "category"=>"1ccc", "user_id"=><BSON::ObjectId:0x70121755742200 data=5595c5445368610603000000>}] flags=[]
+ 7382                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5110ms
+ 7383  Redirected to http://localhost:3000/
+ ....
+ 8625    Parameters: {"utf8"=>"✓", "authenticity_token"=>"HjiMJJbbFQTQqoO40RV/Edri1thZ3SQBWfWTdfSDgLtqFB52iMPZBwfJmrMsZWpZAN15IOYsIafLmhEX5YTYMQ==", "question"=>{"text"=>"asd", "category"=>"entertinment"}, "commit"=>"Create Question"}
+ 8626    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70173933603860 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7230ms
+ 8627:   MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70173933606160 data=559b287e536861036f000001>, "text"=>"asd", "category"=>"entertinment", "user_id"=><BSON::ObjectId:0x70173933542520 data=5595c5445368610603000000>}] flags=[]
+ 8628                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6330ms
+ 8629  Redirected to http://localhost:3000/
+ ....
+ 8683    Parameters: {"utf8"=>"✓", "authenticity_token"=>"e1rBH9Q4uu92ytgpJ/GjYCOn1qPpvPyQpW/VwytjXTcPdlNNyiB27KGpwSLagbYo+Zh5W1ZN+TY3AFehOmQFvQ==", "question"=>{"text"=>"pictures", "category"=>""}, "commit"=>"Create Question"}
+ 8684    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70173933788220 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5090ms
+ 8685:   MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70173933700340 data=559b288a536861036f000002>, "text"=>"pictures", "category"=>"", "user_id"=><BSON::ObjectId:0x70173933784380 data=5595c5445368610603000000>}] flags=[]
+ 8686                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.4670ms
+ 8687  Redirected to http://localhost:3000/
+ ....
+ 8733    Parameters: {"utf8"=>"✓", "authenticity_token"=>"HjiMJJbbFQTQqoO40RV/Edri1thZ3SQBWfWTdfSDgLtqFB52iMPZBwfJmrMsZWpZAN15IOYsIafLmhEX5YTYMQ==", "question"=>{"text"=>"is mona lisa the most famous painting in the world?", "category"=>"entertinment"}, "commit"=>"Create Question"}
+ 8734    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70173907524600 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5180ms
+ 8735:   MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70173947045600 data=559b289c536861036f000003>, "text"=>"is mona lisa the most famous painting in the world?", "category"=>"entertinment", "user_id"=><BSON::ObjectId:0x70173907519700 data=5595c5445368610603000000>}] flags=[]
+ 8736                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6620ms
+ 8737  Redirected to http://localhost:3000/
+ ....
+ 8927    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=categories selector={"category"=>"sports"} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7380ms
+ 8928    MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7010ms
+ 8929:   MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70173931670540 data=559b29a5536861036f000005>, "text"=>"asdsa", "category"=>"sports", "user_id"=><BSON::ObjectId:0x70173931606500 data=5595c5445368610603000000>}] flags=[]
+ 8930                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.7050ms
+ 8931  Redirected to http://localhost:3000/
+
+11 matches across 2 files
+
+
+Searching 223 files for "binding.pry"
+
+/Users/Shaun/Documents/projects/Rails Practice/vote/app/controllers/questions_controller.rb:
+   31  
+   32      #Very inefficient
+   33:     #binding.pry
+   34      @question.category_id = Category.find_by(category: question_params[:category]).id
+   35      #@question.category_name = question_params[:category]
+   36:     #binding.pry
+   37      #@question.category_id = question_params[:category]
+   38  
+
+2 matches in 1 file
