@@ -10,7 +10,7 @@ module QuestionsHelper
       config.access_token_secret = Rails.application.secrets.twitter_access_token_secret
     end
 
-    client.bearer_token
+    #client.bearer_token
 
     client
   end
