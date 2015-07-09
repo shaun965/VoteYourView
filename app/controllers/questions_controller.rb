@@ -45,7 +45,7 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       if @question.save
         client = twitter
-        client.token_bearer
+        client.bearer_token
         #binding.pry
 
         #if Rails.env.production?
