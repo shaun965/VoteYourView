@@ -44,12 +44,15 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
-        client = twitter
-        client.bearer_token
+
+        if Rails.env.production?
+          client = twitter
+          client.bearer_token
+          client.update("#{@question.text} go vote now at #{request.host}/questions/#{@question.id}")
+        end
         #binding.pry
 
         #if Rails.env.production?
-        client.update("#{@question.text} go vote now at #{request.host}/questions/#{@question.id}")
         #end
         format.html { redirect_to root_url, notice: 'Question was successfully created.' }
         format.json { render :show, status: :created, location: @question }
