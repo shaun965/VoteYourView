@@ -5,12 +5,15 @@ Rails.application.routes.draw do
   resources :categories
   resources :categories
   resources :questions
+  resources :comments
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   root 'home#index'
 
   post 'updateVote' => 'vote_details#create', as: :makevote
+
+  # post 'updateComment' => 'comments#create', as: :makecomment
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

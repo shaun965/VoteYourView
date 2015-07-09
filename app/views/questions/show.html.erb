@@ -20,7 +20,39 @@
     <%= link_to "No", makevote_path(question_id: f.id, yes: false, ip: @ip), method: "post" %>
   <% end %>
 
+  <%= form_for(@comment) do |a| %>
+  <div class="actions">
+
+    <% if user_signed_in? %>
+      <%= a.label :Comment %>
+      <%= a.text_field :text, class: 'form-control' %>
+      </pre>
+
+      <%= a.hidden_field :question_id, :value => f.id %>
+      <%= a.hidden_field :user_id, :value => current_user.id %>
+      <%= a.submit %>
+
+    <% else %>
+    <pre>
+    Log in if you want to make a comment!!!
+    </pre>
+    <% end %>
+    </div>
+  <% end %>
   </pre>
+
+ 
+    <% @comments.each do |b| %>
+
+    <pre>
+
+      Username: <%= User.find_by(id: b.user_id).email %>
+      Comment: <%= b.text %>
+    </pre>
+
+    <% end %>
+
+
 
 
 

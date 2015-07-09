@@ -14,6 +14,9 @@ class QuestionsController < ApplicationController
     #@question = Question_id: 
     @ip = request.remote_ip
     @question = Question.find_by(id: params[:id])
+    @comment = Comment.new
+    @comments = Comment.all.where(question_id: params[:id])
+
   end
 
   # GET /questions/new
@@ -42,7 +45,7 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       if @question.save
         client = twitter
-        client.bearer_token
+        client.token_bearer
         #binding.pry
 
         #if Rails.env.production?
