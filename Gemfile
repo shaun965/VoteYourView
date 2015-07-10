@@ -27,6 +27,7 @@ gem 'pry'
 gem 'devise'
 gem 'rails_admin'
 gem 'twitter'
+gem 'mandrill_mailer'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
