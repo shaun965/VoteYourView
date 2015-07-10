@@ -1,5 +1,6 @@
 class VoteDetailsController < ApplicationController
   before_action :set_vote_detail, only: [:show, :edit, :update, :destroy]
+  before_filter :admin?, only: [:show, :edit, :index, :update, :destroy]
 
 
   # GET /vote_details

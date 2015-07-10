@@ -1,5 +1,6 @@
 class IpListsController < ApplicationController
   before_action :set_ip_list, only: [:show, :edit, :update, :destroy]
+  before_filter :admin?
 
   # GET /ip_lists
   # GET /ip_lists.json

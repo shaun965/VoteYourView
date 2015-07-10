@@ -1,0 +1,1917 @@
+Searching 735 files for "secret_token"
+
+0 matches
+
+Searching 735 files for "secret_token"
+
+0 matches
+
+Searching 735 files for "secrets"
+
+/Users/Shaun/Documents/projects/Rails Practice/vote/.gitignore:
+   12  !/log/.keep
+   13  /tmp
+   14: /config/secrets.yml
+   15  
+
+/Users/Shaun/Documents/projects/Rails Practice/vote/config/secrets.yml:
+    8  # You can use `rake secret` to generate a secure secret key.
+    9  
+   10: # Make sure the secrets in this file are kept private
+   11  # if you're sharing your code publicly.
+   12  
+   ..
+   23    secret_key_base: 394131cfb9b6247e412ee5d2ef93ef493c3deed40dc38f5b4f2ff6ef119237be75103a08a1af584241ea8ff40cc0bdbf309c9b00fbb5b06049977f7e8e66f8ce
+   24  
+   25: # Do not keep production secrets in the repository,
+   26  # instead read values from the environment.
+   27  production:
+
+/Users/Shaun/Documents/projects/Rails Practice/vote/config/environments/development.rb:
+   48      :address   => "smtp.mandrillapp.com",
+   49      :port      => 25,
+   50:     :user_name => Rails.application.secrets['MANDRILL_USERNAME'],
+   51:     :password  => Rails.application.secrets["MANDRILL_API_KEY"]
+   52    }
+   53    
+
+/Users/Shaun/Documents/projects/Rails Practice/vote/config/initializers/twitter.rb:
+    1  CLIENT = Twitter::REST::Client.new do |config|
+    2:   config.consumer_key        = Rails.application.secrets.twitter_consumer_key
+    3:   config.consumer_secret     = Rails.application.secrets.twitter_consumer_secret
+    4:   config.access_token        = Rails.application.secrets.twitter_access_token
+    5:   config.access_token_secret = Rails.application.secrets.twitter_access_token_secret
+    6  end
+    7  
+    8  CLIENT.bearer_token
+    9  
+   10: #Gibbon::API.api_key = Rails.application.secrets.mailchimp_api_key
+   11  
+
+10 matches across 4 files
+
+
+Searching 736 files for "localhost"
+
+/Users/Shaun/Documents/projects/Rails Practice/vote/app/controllers/Find Results:
+   31   6734:   MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70356130036840 data=5595e2f65368610810000000>, "text"=>"hello?", "category"=>"life", "user_id"=><BSON::ObjectId:0x70356130030800 data=5595c5445368610603000000>}] flags=[]
+   32   6735                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6050ms
+   33:  6736  Redirected to http://localhost:3000/
+   34   ....
+   35   7282    Parameters: {"utf8"=>"✓", "authenticity_token"=>"qPbvz9z98fdBORnsW6wPwpG0avZagoltesYyQ3wfhimCvrU8z8g9ETGajGw95f2NkOcajAWLRZYmmfT704W6Cw==", "question"=>{"text"=>"as", "category"=>"as"}, "commit"=>"Create Question"}
+   ..
+   37   7284:   MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70121769072920 data=559b1ca953686102e3000000>, "text"=>"as", "category"=>"as", "user_id"=><BSON::ObjectId:0x70121768937620 data=5595c5445368610603000000>}] flags=[]
+   38   7285                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 30.7760ms
+   39:  7286  Redirected to http://localhost:3000/
+   40   ....
+   41   7379    Parameters: {"utf8"=>"✓", "authenticity_token"=>"e4BiCIUZUJnAvsPwXkv+kSv1E10mXw9SWQ1hchZQ+1NRyDj7liycf7AdVnA4AgzeKqZjJ3lWw6kFUqfKucrHcQ==", "question"=>{"text"=>"lccc", "category"=>"1ccc"}, "commit"=>"Create Question"}
+   ..
+   43   7381:   MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70121782047560 data=559b1cc053686102e3000002>, "text"=>"lccc", "category"=>"1ccc", "user_id"=><BSON::ObjectId:0x70121755742200 data=5595c5445368610603000000>}] flags=[]
+   44   7382                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5110ms
+   45:  7383  Redirected to http://localhost:3000/
+   46   ....
+   47   8625    Parameters: {"utf8"=>"✓", "authenticity_token"=>"HjiMJJbbFQTQqoO40RV/Edri1thZ3SQBWfWTdfSDgLtqFB52iMPZBwfJmrMsZWpZAN15IOYsIafLmhEX5YTYMQ==", "question"=>{"text"=>"asd", "category"=>"entertinment"}, "commit"=>"Create Question"}
+   ..
+   49   8627:   MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70173933606160 data=559b287e536861036f000001>, "text"=>"asd", "category"=>"entertinment", "user_id"=><BSON::ObjectId:0x70173933542520 data=5595c5445368610603000000>}] flags=[]
+   50   8628                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6330ms
+   51:  8629  Redirected to http://localhost:3000/
+   52   ....
+   53   8683    Parameters: {"utf8"=>"✓", "authenticity_token"=>"e1rBH9Q4uu92ytgpJ/GjYCOn1qPpvPyQpW/VwytjXTcPdlNNyiB27KGpwSLagbYo+Zh5W1ZN+TY3AFehOmQFvQ==", "question"=>{"text"=>"pictures", "category"=>""}, "commit"=>"Create Question"}
+   ..
+   55   8685:   MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70173933700340 data=559b288a536861036f000002>, "text"=>"pictures", "category"=>"", "user_id"=><BSON::ObjectId:0x70173933784380 data=5595c5445368610603000000>}] flags=[]
+   56   8686                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.4670ms
+   57:  8687  Redirected to http://localhost:3000/
+   58   ....
+   59   8733    Parameters: {"utf8"=>"✓", "authenticity_token"=>"HjiMJJbbFQTQqoO40RV/Edri1thZ3SQBWfWTdfSDgLtqFB52iMPZBwfJmrMsZWpZAN15IOYsIafLmhEX5YTYMQ==", "question"=>{"text"=>"is mona lisa the most famous painting in the world?", "category"=>"entertinment"}, "commit"=>"Create Question"}
+   ..
+   61   8735:   MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70173947045600 data=559b289c536861036f000003>, "text"=>"is mona lisa the most famous painting in the world?", "category"=>"entertinment", "user_id"=><BSON::ObjectId:0x70173907519700 data=5595c5445368610603000000>}] flags=[]
+   62   8736                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6620ms
+   63:  8737  Redirected to http://localhost:3000/
+   64   ....
+   65   8927    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=categories selector={"category"=>"sports"} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7380ms
+   ..
+   67   8929:   MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70173931670540 data=559b29a5536861036f000005>, "text"=>"asdsa", "category"=>"sports", "user_id"=><BSON::ObjectId:0x70173931606500 data=5595c5445368610603000000>}] flags=[]
+   68   8930                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.7050ms
+   69:  8931  Redirected to http://localhost:3000/
+   70  
+   71  11 matches across 2 files
+
+/Users/Shaun/Documents/projects/Rails Practice/vote/config/environment.rb:
+    4  # Initialize the Rails application.
+    5  
+    6: #config.mandrill_mailer.default_url_options = { :host => 'localhost' }
+    7  
+    8  Rails.application.initialize!
+
+/Users/Shaun/Documents/projects/Rails Practice/vote/config/mongoid.yml:
+   10        # of host:port pairs. (required)
+   11        hosts:
+   12:         - localhost:27017
+   13        options:
+   14          # Change the default write concern. (default = { w: 1 })
+   ..
+   93        database: vote_test
+   94        hosts:
+   95:         - localhost:27017
+   96        options:
+   97          read: primary
+   ..
+  112        # # of host:port pairs. (required)
+  113        # hosts:
+  114:       #   - localhost:27017
+  115        uri: <%= ENV['MONGOLAB_URI'] %>
+  116  
+
+/Users/Shaun/Documents/projects/Rails Practice/vote/config/environments/development.rb:
+   37    config.action_mailer.perform_deliveries = true
+   38  
+   39:   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+   40  
+   41:   config.mandrill_mailer.default_url_options = { :host => 'localhost', port: 3000 }
+   42  
+   43  
+
+/Users/Shaun/Documents/projects/Rails Practice/vote/log/development.log:
+  397    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70324183409180 data=5595c16c536861057f000000>} update={"$set"=>{"last_sign_in_at"=>2015-07-02 22:55:42 UTC, "current_sign_in_at"=>2015-07-02 22:55:42 UTC, "last_sign_in_ip"=>"::1", "current_sign_in_ip"=>"::1", "sign_in_count"=>1}} flags=[]
+  398                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 1.9470ms
+  399: Redirected to http://localhost:3000/
+  400  Completed 302 Found in 1463ms
+  401  
+  ...
+  643    MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4470ms
+  644    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70324197968860 data=5595c16c536861057f000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4540ms
+  645: Redirected to http://localhost:3000/
+  646  Filter chain halted as :require_no_authentication rendered or redirected
+  647  Completed 302 Found in 4ms
+  ...
+  965    MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5940ms
+  966    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70324209456320 data=5595c16c536861057f000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5120ms
+  967: Redirected to http://localhost:3000/
+  968  Filter chain halted as :require_no_authentication rendered or redirected
+  969  Completed 302 Found in 3ms
+  ...
+ 1049    MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4610ms
+ 1050    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70324185557480 data=5595c16c536861057f000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3980ms
+ 1051: Redirected to http://localhost:3000/
+ 1052  Filter chain halted as :require_no_authentication rendered or redirected
+ 1053  Completed 302 Found in 3ms
+ ....
+ 1133    MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4460ms
+ 1134    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70324154221200 data=5595c16c536861057f000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3840ms
+ 1135: Redirected to http://localhost:3000/
+ 1136  Filter chain halted as :require_no_authentication rendered or redirected
+ 1137  Completed 302 Found in 3ms
+ ....
+ 1217    MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.9390ms
+ 1218    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70324199137020 data=5595c16c536861057f000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4580ms
+ 1219: Redirected to http://localhost:3000/
+ 1220  Filter chain halted as :require_no_authentication rendered or redirected
+ 1221  Completed 302 Found in 4ms
+ ....
+ 1300  Processing by Devise::RegistrationsController#new as HTML
+ 1301    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70324197182160 data=5595c16c536861057f000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5420ms
+ 1302: Redirected to http://localhost:3000/
+ 1303  Filter chain halted as :require_no_authentication rendered or redirected
+ 1304  Completed 302 Found in 2ms
+ ....
+ 1384    MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6790ms
+ 1385    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70324182759220 data=5595c16c536861057f000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5940ms
+ 1386: Redirected to http://localhost:3000/
+ 1387  Filter chain halted as :require_no_authentication rendered or redirected
+ 1388  Completed 302 Found in 7ms
+ ....
+ 1631    MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4620ms
+ 1632    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70324184453760 data=5595c16c536861057f000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3720ms
+ 1633: Redirected to http://localhost:3000/
+ 1634  Filter chain halted as :require_no_authentication rendered or redirected
+ 1635  Completed 302 Found in 3ms
+ ....
+ 2195    MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5280ms
+ 2196    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70324198888420 data=5595c16c536861057f000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4040ms
+ 2197: Redirected to http://localhost:3000/
+ 2198  Filter chain halted as :require_no_authentication rendered or redirected
+ 2199  Completed 302 Found in 3ms
+ ....
+ 2259  Processing by Devise::SessionsController#new as HTML
+ 2260    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70324198528280 data=5595c16c536861057f000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5210ms
+ 2261: Redirected to http://localhost:3000/
+ 2262  Filter chain halted as :require_no_authentication rendered or redirected
+ 2263  Completed 302 Found in 2ms
+ ....
+ 2273  Processing by Devise::RegistrationsController#new as HTML
+ 2274    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70324197644920 data=5595c16c536861057f000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5920ms
+ 2275: Redirected to http://localhost:3000/
+ 2276  Filter chain halted as :require_no_authentication rendered or redirected
+ 2277  Completed 302 Found in 2ms
+ ....
+ 2337  Processing by Devise::SessionsController#new as HTML
+ 2338    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70324183827420 data=5595c16c536861057f000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5070ms
+ 2339: Redirected to http://localhost:3000/
+ 2340  Filter chain halted as :require_no_authentication rendered or redirected
+ 2341  Completed 302 Found in 2ms
+ ....
+ 2508    MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4870ms
+ 2509    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70324209276940 data=5595c16c536861057f000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4210ms
+ 2510: Redirected to http://localhost:3000/
+ 2511  Filter chain halted as :require_no_authentication rendered or redirected
+ 2512  Completed 302 Found in 3ms
+ ....
+ 2666  Processing by Devise::SessionsController#new as HTML
+ 2667    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70324182755960 data=5595c16c536861057f000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5650ms
+ 2668: Redirected to http://localhost:3000/
+ 2669  Filter chain halted as :require_no_authentication rendered or redirected
+ 2670  Completed 302 Found in 2ms
+ ....
+ 2769    MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7370ms
+ 2770    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70324184840040 data=5595c16c536861057f000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7590ms
+ 2771: Redirected to http://localhost:3000/
+ 2772  Filter chain halted as :require_no_authentication rendered or redirected
+ 2773  Completed 302 Found in 4ms
+ ....
+ 3103    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70270064872680 data=5595c5445368610603000000>} update={"$set"=>{"last_sign_in_at"=>2015-07-02 23:12:04 UTC, "current_sign_in_at"=>2015-07-02 23:12:04 UTC, "last_sign_in_ip"=>"::1", "current_sign_in_ip"=>"::1", "sign_in_count"=>1}} flags=[]
+ 3104                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 17.1950ms
+ 3105: Redirected to http://localhost:3000/
+ 3106  Completed 302 Found in 156ms
+ 3107  
+ ....
+ 3170    Parameters: {"authenticity_token"=>"uiFGFG1OuqpR6gArPdJDJ5+1XZJTpZ7RFnWcXEFwqNMOFnmHt3yK1IrT1S8gUcb9hprh92VkUCnF2sXWR1nWTg=="}
+ 3171    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70270039038840 data=5595c16c536861057f000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.9510ms
+ 3172: Redirected to http://localhost:3000/
+ 3173  Completed 302 Found in 77ms
+ 3174  
+ ....
+ 3363    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70270038459400 data=5595c5445368610603000000>} update={"$set"=>{"current_sign_in_at"=>2015-07-02 23:21:47 UTC, "sign_in_count"=>2}} flags=[]
+ 3364                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6190ms
+ 3365: Redirected to http://localhost:3000/
+ 3366  Completed 302 Found in 118ms
+ 3367  
+ ....
+ 3378    Parameters: {"authenticity_token"=>"ZbS/5g93ct8QWnx+ytSD+1u/9Z92UMK06OOJDzwvtsRmBLuEZonCGFPE34A94uETHkGGUFqOnPSCsyqIgpxHQA=="}
+ 3379    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70270025774860 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5080ms
+ 3380: Redirected to http://localhost:3000/
+ 3381  Completed 302 Found in 3ms
+ 3382  
+ ....
+ 3546    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70167484511820 data=5595c9e5536861066c000000>}] flags=[]
+ 3547                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 71.6160ms
+ 3548: Redirected to http://localhost:3000/questions/5595c9e5536861066c000000
+ 3549  Completed 302 Found in 75ms
+ 3550  
+ ....
+ 3624    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70167483030660 data=5595c5445368610603000000>} update={"$set"=>{"last_sign_in_at"=>2015-07-02 23:21:47 UTC, "current_sign_in_at"=>2015-07-02 23:33:30 UTC, "current_sign_in_ip"=>"127.0.0.1", "sign_in_count"=>3}} flags=[]
+ 3625                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 1.0310ms
+ 3626: Redirected to http://localhost:3000/
+ 3627  Completed 302 Found in 106ms
+ 3628  
+ ....
+ 3843    Parameters: {"authenticity_token"=>"fwgYuspnaVzfnde77zh0sTNcQTrOlXNylHLeU/57IMoETsN9UHaBQssKzqlqtMcMrU5t0JG0r39ajuDTPHuAFw=="}
+ 3844    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70167454075100 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5440ms
+ 3845: Redirected to http://localhost:3000/
+ 3846  Filter chain halted as :require_no_authentication rendered or redirected
+ 3847  Completed 302 Found in 2ms
+ ....
+ 3868    Parameters: {"authenticity_token"=>"m84b50WtR5p0eBWUNizkuHLGGY8gUYNuxv1d/YKFYlHgiMAg37yvhGDvDIazoFcF7NQ1ZX9wX2MIAWN9QIXCjA=="}
+ 3869    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70167493428900 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5180ms
+ 3870: Redirected to http://localhost:3000/
+ 3871  Completed 302 Found in 4ms
+ 3872  
+ ....
+ 3892    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70167455244520 data=5595c5445368610603000000>} update={"$set"=>{"last_sign_in_at"=>2015-07-02 23:33:30 UTC, "current_sign_in_at"=>2015-07-02 23:34:52 UTC, "last_sign_in_ip"=>"127.0.0.1", "sign_in_count"=>4}} flags=[]
+ 3893                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9390ms
+ 3894: Redirected to http://localhost:3000/
+ 3895  Completed 302 Found in 104ms
+ 3896  
+ ....
+ 3917    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70167471352820 data=5595ca9f536861066c000001>}] flags=[]
+ 3918                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5600ms
+ 3919: Redirected to http://localhost:3000/questions/5595ca9f536861066c000001
+ 3920  Completed 302 Found in 2ms
+ 3921  
+ ....
+ 4135    MOPED: 127.0.0.1:27017 DELETE       database=vote_development collection=questions selector={"_id"=><BSON::ObjectId:0x70248052431340 data=5595c9e5536861066c000000>} flags=[:remove_first]
+ 4136                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6100ms
+ 4137: Redirected to http://localhost:3000/questions
+ 4138  Completed 302 Found in 13ms
+ 4139  
+ ....
+ 4154    MOPED: 127.0.0.1:27017 DELETE       database=vote_development collection=questions selector={"_id"=><BSON::ObjectId:0x70248028344520 data=5595ca9f536861066c000001>} flags=[:remove_first]
+ 4155                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.4400ms
+ 4156: Redirected to http://localhost:3000/questions
+ 4157  Completed 302 Found in 6ms
+ 4158  
+ ....
+ 4272    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70248064094120 data=5595d13053686106f7000000>, "yes"=>0, "no"=>0, "text"=>"asd", "category"=>"asd"}] flags=[]
+ 4273                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6170ms
+ 4274: Redirected to http://localhost:3000/questions/5595d13053686106f7000000
+ 4275  Completed 302 Found in 10ms
+ 4276  
+ ....
+ 4350    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70248079151780 data=5595d15853686106f7000001>, "yes"=>0, "no"=>0, "text"=>"piiii", "category"=>"math"}] flags=[]
+ 4351                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5460ms
+ 4352: Redirected to http://localhost:3000/questions/5595d15853686106f7000001
+ 4353  Completed 302 Found in 3ms
+ 4354  
+ ....
+ 4384    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70248079631100 data=5595d16053686106f7000002>, "yes"=>0, "no"=>0, "text"=>"Shaun", "category"=>"cool"}] flags=[]
+ 4385                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5410ms
+ 4386: Redirected to http://localhost:3000/questions/5595d16053686106f7000002
+ 4387  Completed 302 Found in 3ms
+ 4388  
+ ....
+ 4479    Parameters: {"authenticity_token"=>"9umhgMeXXTnjHE5CiQK51puphwbtZIQglbOnJ0WqxKyNxpag4/ndhMfBluW2wUThvF3AKJ433mBgIbLcuTcKdg=="}
+ 4480    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70275268231840 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5930ms
+ 4481: Redirected to http://localhost:3000/
+ 4482  Completed 302 Found in 25ms
+ 4483  
+ ....
+ 4504    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70275273437860 data=5595c5445368610603000000>} update={"$set"=>{"last_sign_in_at"=>2015-07-02 23:34:52 UTC, "current_sign_in_at"=>2015-07-03 00:10:04 UTC, "current_sign_in_ip"=>"::1", "sign_in_count"=>5}} flags=[]
+ 4505                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.8770ms
+ 4506: Redirected to http://localhost:3000/
+ 4507  Completed 302 Found in 114ms
+ 4508  
+ ....
+ 4531    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70275273321320 data=5595d2ff536861072d000000>, "yes"=>0, "no"=>0, "text"=>"Is python one of the greatest wonders of this world?", "category"=>"Tech"}] flags=[]
+ 4532                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.4360ms
+ 4533: Redirected to http://localhost:3000/questions/5595d2ff536861072d000000
+ 4534  Completed 302 Found in 12ms
+ 4535  
+ ....
+ 4566    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70275291946940 data=5595d344536861072d000001>, "yes"=>0, "no"=>0, "text"=>"is this world going to be gone soon?", "category"=>"Science"}] flags=[]
+ 4567                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5740ms
+ 4568: Redirected to http://localhost:3000/questions/5595d344536861072d000001
+ 4569  Completed 302 Found in 3ms
+ 4570  
+ ....
+ 4771    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70275269719580 data=5595d541536861072d000006>, "yes"=>0, "no"=>0, "text"=>"i am cool", "category"=>"self"}] flags=[]
+ 4772                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5720ms
+ 4773: Redirected to http://localhost:3000/
+ 4774  Completed 302 Found in 9ms
+ 4775  
+ ....
+ 4855    MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6810ms
+ 4856    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70291627822860 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4170ms
+ 4857: Redirected to http://localhost:3000/
+ 4858  Completed 302 Found in 33ms
+ 4859  
+ ....
+ 4900    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70291629951640 data=5595c5445368610603000000>} update={"$set"=>{"last_sign_in_at"=>2015-07-03 00:10:04 UTC, "current_sign_in_at"=>2015-07-03 00:49:18 UTC, "last_sign_in_ip"=>"::1", "sign_in_count"=>6}} flags=[]
+ 4901                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 1.0440ms
+ 4902: Redirected to http://localhost:3000/
+ 4903  Completed 302 Found in 103ms
+ 4904  
+ ....
+ 5249    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322979081480 data=5595e13253686107d3000000>, "question_id"=><BSON::ObjectId:0x70322982793420 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 5250                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 75.2830ms
+ 5251: Redirected to http://localhost:3000/
+ 5252  Completed 302 Found in 97ms
+ 5253  
+ ....
+ 5287    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322998824660 data=5595e13c53686107d3000001>, "question_id"=><BSON::ObjectId:0x70322998824000 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 5288                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5310ms
+ 5289: Redirected to http://localhost:3000/
+ 5290  Completed 302 Found in 3ms
+ 5291  
+ ....
+ 5325    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70323000363360 data=5595e13e53686107d3000002>, "question_id"=><BSON::ObjectId:0x70323000362660 data=5595d13053686106f7000000>, "yes"=>false}] flags=[]
+ 5326                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5180ms
+ 5327: Redirected to http://localhost:3000/
+ 5328  Completed 302 Found in 2ms
+ 5329  
+ ....
+ 5363    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322982570580 data=5595e14353686107d3000003>, "question_id"=><BSON::ObjectId:0x70322982569760 data=5595d13053686106f7000000>, "yes"=>false}] flags=[]
+ 5364                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5000ms
+ 5365: Redirected to http://localhost:3000/
+ 5366  Completed 302 Found in 3ms
+ 5367  
+ ....
+ 5401    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322977309660 data=5595e14553686107d3000004>, "question_id"=><BSON::ObjectId:0x70322977299440 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 5402                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5220ms
+ 5403: Redirected to http://localhost:3000/
+ 5404  Completed 302 Found in 3ms
+ 5405  
+ ....
+ 5439    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322998828100 data=5595e14a53686107d3000005>, "question_id"=><BSON::ObjectId:0x70322998827380 data=5595d15853686106f7000001>, "yes"=>true}] flags=[]
+ 5440                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.4950ms
+ 5441: Redirected to http://localhost:3000/
+ 5442  Completed 302 Found in 2ms
+ 5443  
+ ....
+ 5477    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322998265500 data=5595e14b53686107d3000006>, "question_id"=><BSON::ObjectId:0x70322998264600 data=5595d15853686106f7000001>, "yes"=>false}] flags=[]
+ 5478                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.4830ms
+ 5479: Redirected to http://localhost:3000/
+ 5480  Completed 302 Found in 2ms
+ 5481  
+ ....
+ 5515    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322981824860 data=5595e14d53686107d3000007>, "question_id"=><BSON::ObjectId:0x70322981823240 data=5595d15853686106f7000001>, "yes"=>false}] flags=[]
+ 5516                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5500ms
+ 5517: Redirected to http://localhost:3000/
+ 5518  Completed 302 Found in 2ms
+ 5519  
+ ....
+ 5553    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70323000463300 data=5595e15453686107d3000008>, "question_id"=><BSON::ObjectId:0x70323000462640 data=5595d15853686106f7000001>, "yes"=>true}] flags=[]
+ 5554                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5090ms
+ 5555: Redirected to http://localhost:3000/
+ 5556  Completed 302 Found in 2ms
+ 5557  
+ ....
+ 5591    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322999252740 data=5595e15553686107d3000009>, "question_id"=><BSON::ObjectId:0x70322999252000 data=5595d15853686106f7000001>, "yes"=>false}] flags=[]
+ 5592                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6390ms
+ 5593: Redirected to http://localhost:3000/
+ 5594  Completed 302 Found in 4ms
+ 5595  
+ ....
+ 5629    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322996926840 data=5595e15653686107d300000a>, "question_id"=><BSON::ObjectId:0x70322996925160 data=5595d15853686106f7000001>, "yes"=>false}] flags=[]
+ 5630                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5410ms
+ 5631: Redirected to http://localhost:3000/
+ 5632  Completed 302 Found in 2ms
+ 5633  
+ ....
+ 5667    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322945865760 data=5595e15753686107d300000b>, "question_id"=><BSON::ObjectId:0x70322945863020 data=5595d15853686106f7000001>, "yes"=>true}] flags=[]
+ 5668                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5220ms
+ 5669: Redirected to http://localhost:3000/
+ 5670  Completed 302 Found in 3ms
+ 5671  
+ ....
+ 5705    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322998644780 data=5595e15853686107d300000c>, "question_id"=><BSON::ObjectId:0x70322998644120 data=5595d15853686106f7000001>, "yes"=>true}] flags=[]
+ 5706                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6160ms
+ 5707: Redirected to http://localhost:3000/
+ 5708  Completed 302 Found in 3ms
+ 5709  
+ ....
+ 5752    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70322980826840 data=5595e18853686107d300000d>, "text"=>"are there rabbits in this world?", "category"=>"animal"}] flags=[]
+ 5753                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5900ms
+ 5754: Redirected to http://localhost:3000/
+ 5755  Completed 302 Found in 3ms
+ 5756  
+ ....
+ 5792    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70323000396940 data=5595e18b53686107d300000e>, "question_id"=><BSON::ObjectId:0x70323000396280 data=5595e18853686107d300000d>, "yes"=>true}] flags=[]
+ 5793                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5210ms
+ 5794: Redirected to http://localhost:3000/
+ 5795  Completed 302 Found in 3ms
+ 5796  
+ ....
+ 5832    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322998890940 data=5595e18e53686107d300000f>, "question_id"=><BSON::ObjectId:0x70322998890200 data=5595e18853686107d300000d>, "yes"=>false}] flags=[]
+ 5833                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5620ms
+ 5834: Redirected to http://localhost:3000/
+ 5835  Completed 302 Found in 2ms
+ 5836  
+ ....
+ 5872    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322947074740 data=5595e19053686107d3000010>, "question_id"=><BSON::ObjectId:0x70322947073120 data=5595e18853686107d300000d>, "yes"=>true}] flags=[]
+ 5873                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5220ms
+ 5874: Redirected to http://localhost:3000/
+ 5875  Completed 302 Found in 3ms
+ 5876  
+ ....
+ 5913    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322998711460 data=5595e1b253686107d3000011>, "question_id"=><BSON::ObjectId:0x70322998710780 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 5914                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.3770ms
+ 5915: Redirected to http://localhost:3000/
+ 5916  Completed 302 Found in 3ms
+ 5917  
+ ....
+ 5953    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322999529820 data=5595e1b453686107d3000012>, "question_id"=><BSON::ObjectId:0x70322999528760 data=5595d13053686106f7000000>, "yes"=>false}] flags=[]
+ 5954                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5230ms
+ 5955: Redirected to http://localhost:3000/
+ 5956  Completed 302 Found in 3ms
+ 5957  
+ ....
+ 5993    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322955572160 data=5595e1b553686107d3000013>, "question_id"=><BSON::ObjectId:0x70322955570540 data=5595d13053686106f7000000>, "yes"=>false}] flags=[]
+ 5994                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5750ms
+ 5995: Redirected to http://localhost:3000/
+ 5996  Completed 302 Found in 3ms
+ 5997  
+ ....
+ 6033    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322946239460 data=5595e1b653686107d3000014>, "question_id"=><BSON::ObjectId:0x70322946237000 data=5595d13053686106f7000000>, "yes"=>false}] flags=[]
+ 6034                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5230ms
+ 6035: Redirected to http://localhost:3000/
+ 6036  Completed 302 Found in 2ms
+ 6037  
+ ....
+ 6073    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322998991180 data=5595e1b853686107d3000015>, "question_id"=><BSON::ObjectId:0x70322998990460 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 6074                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5160ms
+ 6075: Redirected to http://localhost:3000/
+ 6076  Completed 302 Found in 2ms
+ 6077  
+ ....
+ 6113    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322997892620 data=5595e1ba53686107d3000016>, "question_id"=><BSON::ObjectId:0x70322997891200 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 6114                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5130ms
+ 6115: Redirected to http://localhost:3000/
+ 6116  Completed 302 Found in 3ms
+ 6117  
+ ....
+ 6153    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322941600960 data=5595e1ba53686107d3000017>, "question_id"=><BSON::ObjectId:0x70322941585840 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 6154                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.8140ms
+ 6155: Redirected to http://localhost:3000/
+ 6156  Completed 302 Found in 3ms
+ 6157  
+ ....
+ 6193    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322998612160 data=5595e1bb53686107d3000018>, "question_id"=><BSON::ObjectId:0x70322998611480 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 6194                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9280ms
+ 6195: Redirected to http://localhost:3000/
+ 6196  Completed 302 Found in 3ms
+ 6197  
+ ....
+ 6233    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322983194960 data=5595e1bb53686107d3000019>, "question_id"=><BSON::ObjectId:0x70322983194240 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 6234                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5460ms
+ 6235: Redirected to http://localhost:3000/
+ 6236  Completed 302 Found in 3ms
+ 6237  
+ ....
+ 6273    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322981988680 data=5595e1bb53686107d300001a>, "question_id"=><BSON::ObjectId:0x70322981986980 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 6274                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5510ms
+ 6275: Redirected to http://localhost:3000/
+ 6276  Completed 302 Found in 2ms
+ 6277  
+ ....
+ 6313    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70323000660080 data=5595e1bc53686107d300001b>, "question_id"=><BSON::ObjectId:0x70323000659420 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 6314                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6590ms
+ 6315: Redirected to http://localhost:3000/
+ 6316  Completed 302 Found in 4ms
+ 6317  
+ ....
+ 6353    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322955920580 data=5595e1bc53686107d300001c>, "question_id"=><BSON::ObjectId:0x70322955919900 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 6354                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9250ms
+ 6355: Redirected to http://localhost:3000/
+ 6356  Completed 302 Found in 3ms
+ 6357  
+ ....
+ 6393    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322979540280 data=5595e1bc53686107d300001d>, "question_id"=><BSON::ObjectId:0x70322979538280 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 6394                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5840ms
+ 6395: Redirected to http://localhost:3000/
+ 6396  Completed 302 Found in 3ms
+ 6397  
+ ....
+ 6433    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322944658620 data=5595e1bd53686107d300001e>, "question_id"=><BSON::ObjectId:0x70322944641100 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 6434                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5020ms
+ 6435: Redirected to http://localhost:3000/
+ 6436  Completed 302 Found in 3ms
+ 6437  
+ ....
+ 6473    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322947808140 data=5595e1bd53686107d300001f>, "question_id"=><BSON::ObjectId:0x70322947807480 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 6474                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5100ms
+ 6475: Redirected to http://localhost:3000/
+ 6476  Completed 302 Found in 3ms
+ 6477  
+ ....
+ 6513    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322982873480 data=5595e1bd53686107d3000020>, "question_id"=><BSON::ObjectId:0x70322982871780 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 6514                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5370ms
+ 6515: Redirected to http://localhost:3000/
+ 6516  Completed 302 Found in 3ms
+ 6517  
+ ....
+ 6553    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322976228960 data=5595e1be53686107d3000021>, "question_id"=><BSON::ObjectId:0x70322976217780 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 6554                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5460ms
+ 6555: Redirected to http://localhost:3000/
+ 6556  Completed 302 Found in 3ms
+ 6557  
+ ....
+ 6591    Parameters: {"authenticity_token"=>"Bz2ZJdHAXPqaraG4gJwrS2nIJH2IihL1mJfD+MCjuEohbJA3x0wt140F1KHgKKugqXk9jlKZ/nYAV+Eqi2xquw=="}
+ 6592    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70323000626400 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8100ms
+ 6593: Redirected to http://localhost:3000/
+ 6594  Completed 302 Found in 5ms
+ 6595  
+ ....
+ 6630    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70322998123200 data=5595e1ca53686107d3000022>, "question_id"=><BSON::ObjectId:0x70322998122080 data=5595d13053686106f7000000>, "yes"=>false}] flags=[]
+ 6631                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5520ms
+ 6632: Redirected to http://localhost:3000/
+ 6633  Completed 302 Found in 3ms
+ 6634  
+ ....
+ 6685    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70356140558880 data=5595c5445368610603000000>} update={"$set"=>{"last_sign_in_at"=>2015-07-03 00:49:18 UTC, "current_sign_in_at"=>2015-07-03 01:18:34 UTC, "sign_in_count"=>7}} flags=[]
+ 6686                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6840ms
+ 6687: Redirected to http://localhost:3000/
+ 6688  Completed 302 Found in 107ms
+ 6689  
+ ....
+ 6734    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70356130036840 data=5595e2f65368610810000000>, "text"=>"hello?", "category"=>"life", "user_id"=><BSON::ObjectId:0x70356130030800 data=5595c5445368610603000000>}] flags=[]
+ 6735                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6050ms
+ 6736: Redirected to http://localhost:3000/
+ 6737  Completed 302 Found in 5ms
+ 6738  
+ ....
+ 6822    MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4680ms
+ 6823    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70313707801340 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4790ms
+ 6824: Redirected to http://localhost:3000/
+ 6825  Completed 302 Found in 22ms
+ 6826  
+ ....
+ 6980    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70194337076140 data=559b138e5368610272000000>, "question_id"=><BSON::ObjectId:0x70194337075340 data=5595d2ff536861072d000000>, "yes"=>true}] flags=[]
+ 6981                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 69.7950ms
+ 6982: Redirected to http://localhost:3000/
+ 6983  Completed 302 Found in 103ms
+ 6984  
+ ....
+ 7022    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70194336416480 data=559b13915368610272000001>, "question_id"=><BSON::ObjectId:0x70194337783400 data=5595d2ff536861072d000000>, "yes"=>true}] flags=[]
+ 7023                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5530ms
+ 7024: Redirected to http://localhost:3000/
+ 7025  Completed 302 Found in 3ms
+ 7026  
+ ....
+ 7064    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70194356112200 data=559b13955368610272000002>, "question_id"=><BSON::ObjectId:0x70194356111540 data=5595d2ff536861072d000000>, "yes"=>false}] flags=[]
+ 7065                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5280ms
+ 7066: Redirected to http://localhost:3000/
+ 7067  Completed 302 Found in 3ms
+ 7068  
+ ....
+ 7284    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70121769072920 data=559b1ca953686102e3000000>, "text"=>"as", "category"=>"as", "user_id"=><BSON::ObjectId:0x70121768937620 data=5595c5445368610603000000>}] flags=[]
+ 7285                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 30.7760ms
+ 7286: Redirected to http://localhost:3000/
+ 7287  Completed 302 Found in 40ms
+ 7288  
+ ....
+ 7328    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70121755547860 data=559b1cb753686102e3000001>, "question_id"=><BSON::ObjectId:0x70121755547180 data=559b1ca953686102e3000000>, "yes"=>true}] flags=[]
+ 7329                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5830ms
+ 7330: Redirected to http://localhost:3000/
+ 7331  Completed 302 Found in 3ms
+ 7332  
+ ....
+ 7381    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70121782047560 data=559b1cc053686102e3000002>, "text"=>"lccc", "category"=>"1ccc", "user_id"=><BSON::ObjectId:0x70121755742200 data=5595c5445368610603000000>}] flags=[]
+ 7382                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5110ms
+ 7383: Redirected to http://localhost:3000/
+ 7384  Completed 302 Found in 5ms
+ 7385  
+ ....
+ 7632    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=categories documents=[{"_id"=><BSON::ObjectId:0x70301598761420 data=559b223d5368610302000000>, "category"=>"entertinment"}] flags=[]
+ 7633                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 40.9020ms
+ 7634: Redirected to http://localhost:3000/categories/559b223d5368610302000000
+ 7635  Completed 302 Found in 45ms
+ 7636  
+ ....
+ 7678    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=categories documents=[{"_id"=><BSON::ObjectId:0x70301603478100 data=559b225a5368610302000001>, "category"=>"sports"}] flags=[]
+ 7679                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5220ms
+ 7680: Redirected to http://localhost:3000/categories/559b225a5368610302000001
+ 7681  Completed 302 Found in 2ms
+ 7682  
+ ....
+ 8246    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70301647932540 data=5595c5445368610603000000>} update={"$set"=>{"last_sign_in_at"=>2015-07-03 01:18:34 UTC, "current_sign_in_at"=>2015-07-07 00:53:33 UTC, "sign_in_count"=>8}} flags=[]
+ 8247                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 392.3950ms
+ 8248: Redirected to http://localhost:3000/
+ 8249  Completed 302 Found in 499ms
+ 8250  
+ ....
+ 8627    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70173933606160 data=559b287e536861036f000001>, "text"=>"asd", "category"=>"entertinment", "user_id"=><BSON::ObjectId:0x70173933542520 data=5595c5445368610603000000>}] flags=[]
+ 8628                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6330ms
+ 8629: Redirected to http://localhost:3000/
+ 8630  Completed 302 Found in 19ms
+ 8631  
+ ....
+ 8685    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70173933700340 data=559b288a536861036f000002>, "text"=>"pictures", "category"=>"", "user_id"=><BSON::ObjectId:0x70173933784380 data=5595c5445368610603000000>}] flags=[]
+ 8686                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.4670ms
+ 8687: Redirected to http://localhost:3000/
+ 8688  Completed 302 Found in 4ms
+ 8689  
+ ....
+ 8735    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70173947045600 data=559b289c536861036f000003>, "text"=>"is mona lisa the most famous painting in the world?", "category"=>"entertinment", "user_id"=><BSON::ObjectId:0x70173907519700 data=5595c5445368610603000000>}] flags=[]
+ 8736                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6620ms
+ 8737: Redirected to http://localhost:3000/
+ 8738  Completed 302 Found in 4ms
+ 8739  
+ ....
+ 8787    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70173931851820 data=559b28a0536861036f000004>, "question_id"=><BSON::ObjectId:0x70173931850120 data=559b289c536861036f000003>, "yes"=>true}] flags=[]
+ 8788                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.7760ms
+ 8789: Redirected to http://localhost:3000/
+ 8790  Completed 302 Found in 4ms
+ 8791  
+ ....
+ 8929    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70173931670540 data=559b29a5536861036f000005>, "text"=>"asdsa", "category"=>"sports", "user_id"=><BSON::ObjectId:0x70173931606500 data=5595c5445368610603000000>}] flags=[]
+ 8930                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.7050ms
+ 8931: Redirected to http://localhost:3000/
+ 8932  Completed 302 Found in 283013ms
+ 8933  
+ ....
+ 9220    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70142603626500 data=559b2eab53686103e3000000>, "question_id"=><BSON::ObjectId:0x70142630565880 data=5595d13053686106f7000000>, "yes"=>true}] flags=[]
+ 9221                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 1.4670ms
+ 9222: Redirected to http://localhost:3000/
+ 9223  Completed 302 Found in 34ms
+ 9224  
+ ....
+ 9274    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70142647534620 data=559b2ead53686103e3000001>, "question_id"=><BSON::ObjectId:0x70142647533960 data=5595d13053686106f7000000>, "yes"=>false}] flags=[]
+ 9275                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 2.2050ms
+ 9276: Redirected to http://localhost:3000/
+ 9277  Completed 302 Found in 13ms
+ 9278  
+ ....
+ 9328    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70142644178760 data=559b2eb953686103e3000002>, "question_id"=><BSON::ObjectId:0x70142644178100 data=5595d15853686106f7000001>, "yes"=>true}] flags=[]
+ 9329                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 1.7880ms
+ 9330: Redirected to http://localhost:3000/
+ 9331  Completed 302 Found in 7ms
+ 9332  
+ ....
+ 9653    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=categories documents=[{"_id"=><BSON::ObjectId:0x70142646081840 data=559b300553686103e3000003>, "category"=>"sports"}] flags=[]
+ 9654                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 66.2070ms
+ 9655: Redirected to http://localhost:3000/categories/559b300553686103e3000003
+ 9656  Completed 302 Found in 69ms
+ 9657  
+ ....
+ 9915    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70142632963280 data=559b30c753686103e3000005>, "text"=>"daqs", "user_id"=><BSON::ObjectId:0x70142632847080 data=5595c5445368610603000000>, "category_id"=><BSON::ObjectId:0x70142595527660 data=559b225a5368610302000001>}] flags=[]
+ 9916                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 1.4630ms
+ 9917: Redirected to http://localhost:3000/
+ 9918  Completed 302 Found in 6907ms
+ 9919  
+ ....
+ 9987    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70142649136020 data=559b310553686103e3000006>, "text"=>"adddds", "user_id"=><BSON::ObjectId:0x70142605911280 data=5595c5445368610603000000>, "category_id"=><BSON::ObjectId:0x70142643477840 data=559b225a5368610302000001>}] flags=[]
+ 9988                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9370ms
+ 9989: Redirected to http://localhost:3000/
+ 9990  Completed 302 Found in 160366ms
+ 9991  
+ ....
+ 10460    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70142644885580 data=559b349253686103e3000007>, "text"=>"pictures cutting closer", "user_id"=><BSON::ObjectId:0x70142647535080 data=5595c5445368610603000000>, "category_id"=><BSON::ObjectId:0x70142648003700 data=559b223d5368610302000000>}] flags=[]
+ 10461                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 1.0230ms
+ 10462: Redirected to http://localhost:3000/
+ 10463  Completed 302 Found in 4000ms
+ 10464  
+ .....
+ 10520    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70142646342920 data=559b349b53686103e3000008>, "question_id"=><BSON::ObjectId:0x70142646341120 data=559b349253686103e3000007>, "yes"=>true}] flags=[]
+ 10521                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 14.1640ms
+ 10522: Redirected to http://localhost:3000/
+ 10523  Completed 302 Found in 19ms
+ 10524  
+ .....
+ 10599    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70142632443560 data=559b350f53686103e3000009>, "text"=>"pig are cute", "user_id"=><BSON::ObjectId:0x70142641869540 data=5595c5445368610603000000>, "category_id"=><BSON::ObjectId:0x70142595198960 data=559b223d5368610302000000>}] flags=[]
+ 10600                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.7230ms
+ 10601: Redirected to http://localhost:3000/
+ 10602  Completed 302 Found in 6125ms
+ 10603  
+ .....
+ 10661    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70142647991800 data=559b351553686103e300000a>, "question_id"=><BSON::ObjectId:0x70142647991120 data=559b350f53686103e3000009>, "yes"=>true}] flags=[]
+ 10662                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5710ms
+ 10663: Redirected to http://localhost:3000/
+ 10664  Completed 302 Found in 3ms
+ 10665  
+ .....
+ 10859    MOPED: 127.0.0.1:27017 DELETE       database=vote_development collection=categories selector={"_id"=><BSON::ObjectId:0x70142666263140 data=559b300553686103e3000003>} flags=[:remove_first]
+ 10860                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 76.9270ms
+ 10861: Redirected to http://localhost:3000/categories
+ 10862  Completed 302 Found in 90ms
+ 10863  
+ .....
+ 10896    MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5210ms
+ 10897    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70142676518120 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4940ms
+ 10898: Redirected to http://localhost:3000/
+ 10899  Completed 302 Found in 29ms
+ 10900  
+ .....
+ 10974    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70142646850860 data=559b360e53686103e300000b>} update={"$set"=>{"last_sign_in_at"=>2015-07-07 02:14:38 UTC, "current_sign_in_at"=>2015-07-07 02:14:38 UTC, "last_sign_in_ip"=>"::1", "current_sign_in_ip"=>"::1", "sign_in_count"=>1}} flags=[]
+ 10975                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 47.5050ms
+ 10976: Redirected to http://localhost:3000/
+ 10977  Completed 302 Found in 187ms
+ 10978  
+ .....
+ 11049    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70142663187520 data=559b363653686103e300000c>, "text"=>"Is hollywood going die anytime soon?", "user_id"=><BSON::ObjectId:0x70142663282260 data=559b360e53686103e300000b>, "category_id"=><BSON::ObjectId:0x70142597499840 data=559b223d5368610302000000>}] flags=[]
+ 11050                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.7390ms
+ 11051: Redirected to http://localhost:3000/
+ 11052  Completed 302 Found in 7894ms
+ 11053  
+ .....
+ 11113    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70142605690140 data=559b364153686103e300000d>, "question_id"=><BSON::ObjectId:0x70142605689460 data=559b363653686103e300000c>, "yes"=>true}] flags=[]
+ 11114                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6690ms
+ 11115: Redirected to http://localhost:3000/
+ 11116  Completed 302 Found in 4ms
+ 11117  
+ .....
+ 11177    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70142668245880 data=559b364553686103e300000e>, "question_id"=><BSON::ObjectId:0x70142668245220 data=559b363653686103e300000c>, "yes"=>false}] flags=[]
+ 11178                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5260ms
+ 11179: Redirected to http://localhost:3000/
+ 11180  Completed 302 Found in 3ms
+ 11181  
+ .....
+ 11241    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70142607840520 data=559b364953686103e300000f>, "question_id"=><BSON::ObjectId:0x70142607839800 data=559b363653686103e300000c>, "yes"=>true}] flags=[]
+ 11242                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5610ms
+ 11243: Redirected to http://localhost:3000/
+ 11244  Completed 302 Found in 3ms
+ 11245  
+ .....
+ 11303    Parameters: {"authenticity_token"=>"Qgpisv/ueCvxKpFt17b4I/SOKxWrBkWBAL/Qetdz7ECxhOb/uAkIloxdH8ytNv/VxOAuQdRg0dP1CmNMKrzlOA=="}
+ 11304    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70142680417680 data=559b360e53686103e300000b>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5080ms
+ 11305: Redirected to http://localhost:3000/
+ 11306  Completed 302 Found in 3ms
+ 11307  
+ .....
+ 11795    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70200906778180 data=5595c5445368610603000000>} update={"$set"=>{"last_sign_in_at"=>2015-07-07 00:53:33 UTC, "current_sign_in_at"=>2015-07-07 17:18:19 UTC, "sign_in_count"=>9}} flags=[]
+ 11796                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 1.0830ms
+ 11797: Redirected to http://localhost:3000/
+ 11798  Completed 302 Found in 135ms
+ 11799  
+ .....
+ 11895    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70200906994160 data=559c09f053686101d4000000>, "text"=>"adadad", "user_id"=><BSON::ObjectId:0x70200904392440 data=5595c5445368610603000000>, "category_id"=><BSON::ObjectId:0x70200863995800 data=559b223d5368610302000000>}] flags=[]
+ 11896                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 74.4000ms
+ 11897: Redirected to http://localhost:3000/
+ 11898  Completed 302 Found in 11564ms
+ 11899  
+ .....
+ 12066    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70200919936200 data=559c0a6d53686101d4000001>, "question_id"=><BSON::ObjectId:0x70200919935480 data=559c09f053686101d4000000>, "yes"=>true, "ip"=>"::1"}] flags=[]
+ 12067                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 93.6970ms
+ 12068: Redirected to http://localhost:3000/
+ 12069  Completed 302 Found in 97ms
+ 12070  
+ .....
+ 12156    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70200908637760 data=559c0a8053686101d4000002>, "question_id"=><BSON::ObjectId:0x70200908636440 data=559b363653686103e300000c>, "yes"=>true, "ip"=>"::1"}] flags=[]
+ 12157                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5940ms
+ 12158: Redirected to http://localhost:3000/
+ 12159  Completed 302 Found in 2ms
+ 12160  
+ .....
+ 12246    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70200876982860 data=559c0a8453686101d4000003>, "question_id"=><BSON::ObjectId:0x70200876953800 data=559b350f53686103e3000009>, "yes"=>false, "ip"=>"::1"}] flags=[]
+ 12247                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5740ms
+ 12248: Redirected to http://localhost:3000/
+ 12249  Completed 302 Found in 3ms
+ 12250  
+ .....
+ 12336    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70200917983460 data=559c0a8853686101d4000004>, "question_id"=><BSON::ObjectId:0x70200917973680 data=559b349253686103e3000007>, "yes"=>true, "ip"=>"::1"}] flags=[]
+ 12337                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5210ms
+ 12338: Redirected to http://localhost:3000/
+ 12339  Completed 302 Found in 2ms
+ 12340  
+ .....
+ 12427    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70200905739340 data=559c0ac253686101d4000005>, "question_id"=><BSON::ObjectId:0x70200905737080 data=559b1ca953686102e3000000>, "yes"=>true, "ip"=>"::1"}] flags=[]
+ 12428                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.4220ms
+ 12429: Redirected to http://localhost:3000/
+ 12430  Completed 302 Found in 3ms
+ 12431  
+ .....
+ 12517    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70200903841080 data=559c0ac953686101d4000006>, "question_id"=><BSON::ObjectId:0x70200903840420 data=559b29a5536861036f000005>, "yes"=>true, "ip"=>"::1"}] flags=[]
+ 12518                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6130ms
+ 12519: Redirected to http://localhost:3000/
+ 12520  Completed 302 Found in 3ms
+ 12521  
+ .....
+ 12607    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70200908083500 data=559c0ad953686101d4000007>, "question_id"=><BSON::ObjectId:0x70200908081920 data=5595d13053686106f7000000>, "yes"=>false, "ip"=>"::1"}] flags=[]
+ 12608                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5620ms
+ 12609: Redirected to http://localhost:3000/
+ 12610  Completed 302 Found in 3ms
+ 12611  
+ .....
+ 12697    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70200919593660 data=559c0adb53686101d4000008>, "question_id"=><BSON::ObjectId:0x70200919593000 data=5595d15853686106f7000001>, "yes"=>true, "ip"=>"::1"}] flags=[]
+ 12698                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5620ms
+ 12699: Redirected to http://localhost:3000/
+ 12700  Completed 302 Found in 2ms
+ 12701  
+ .....
+ 12867    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70200902924460 data=559c0aec53686101d4000009>, "question_id"=><BSON::ObjectId:0x70200902923700 data=5595d2ff536861072d000000>, "yes"=>false, "ip"=>"::1"}] flags=[]
+ 12868                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5590ms
+ 12869: Redirected to http://localhost:3000/
+ 12870  Completed 302 Found in 2ms
+ 12871  
+ .....
+ 12957    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70200928276220 data=559c0afa53686101d400000a>, "question_id"=><BSON::ObjectId:0x70200928275460 data=5595d412536861072d000003>, "yes"=>true, "ip"=>"::1"}] flags=[]
+ 12958                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5350ms
+ 12959: Redirected to http://localhost:3000/
+ 12960  Completed 302 Found in 9ms
+ 12961  
+ .....
+ 13128    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70200928234100 data=559c0b2153686101d400000b>, "question_id"=><BSON::ObjectId:0x70200928233400 data=5595d16053686106f7000002>, "yes"=>false, "ip"=>"::1"}] flags=[]
+ 13129                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6260ms
+ 13130: Redirected to http://localhost:3000/
+ 13131  Completed 302 Found in 3ms
+ 13132  
+ .....
+ 13299    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70200926556920 data=559c0b6653686101d400000c>, "question_id"=><BSON::ObjectId:0x70200926556200 data=5595d13053686106f7000000>, "yes"=>true, "ip"=>"127.0.0.1"}] flags=[]
+ 13300                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6390ms
+ 13301: Redirected to http://localhost:3000/
+ 13302  Completed 302 Found in 4ms
+ 13303  
+ .....
+ 13390    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70200918005560 data=559c0b9453686101d400000d>, "question_id"=><BSON::ObjectId:0x70200918003760 data=5595d2ff536861072d000000>, "yes"=>true, "ip"=>"127.0.0.1"}] flags=[]
+ 13391                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 1.4870ms
+ 13392: Redirected to http://localhost:3000/
+ 13393  Completed 302 Found in 12ms
+ 13394  
+ .....
+ 13560    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70200919939320 data=559c0ba053686101d400000e>, "question_id"=><BSON::ObjectId:0x70200919938660 data=5595d3d4536861072d000002>, "yes"=>true, "ip"=>"::1"}] flags=[]
+ 13561                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 1.5890ms
+ 13562: Redirected to http://localhost:3000/
+ 13563  Completed 302 Found in 9ms
+ 13564  
+ .....
+ 13742    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70200867741100 data=559c0c4653686101d400000f>, "question_id"=><BSON::ObjectId:0x70200867738600 data=5595d48f536861072d000005>, "yes"=>true, "ip"=>"::1"}] flags=[]
+ 13743                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 1.7330ms
+ 13744: Redirected to http://localhost:3000/
+ 13745  Completed 302 Found in 10ms
+ 13746  
+ .....
+ 13830    Parameters: {"authenticity_token"=>"sipddS/WEsLcAX0CnCNKw+dvzkIqZoYkUfxhvZAhF1G5uFbRwng706VoPb8gj1uZumRTL3EnihIslBoUQcUFgA=="}
+ 13831    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70200904003260 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.7690ms
+ 13832: Redirected to http://localhost:3000/
+ 13833  Completed 302 Found in 80ms
+ 13834  
+ .....
+ 14225    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70284503535560 data=5595c5445368610603000000>} update={"$set"=>{"last_sign_in_at"=>2015-07-07 17:18:19 UTC, "current_sign_in_at"=>2015-07-07 17:30:26 UTC, "sign_in_count"=>10}} flags=[]
+ 14226                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 3.0520ms
+ 14227: Redirected to http://localhost:3000/
+ 14228  Completed 302 Found in 372ms
+ 14229  
+ .....
+ 14348    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=categories documents=[{"_id"=><BSON::ObjectId:0x70284473693760 data=559c0ce6536861022a000000>, "category"=>"Life"}] flags=[]
+ 14349                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5600ms
+ 14350: Redirected to http://localhost:3000/categories/559c0ce6536861022a000000
+ 14351  Completed 302 Found in 4ms
+ 14352  
+ .....
+ 14388    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70284505453440 data=559c0cfa536861022a000001>, "text"=>"Is life suppose to be filled with joy?", "user_id"=><BSON::ObjectId:0x70284505466280 data=5595c5445368610603000000>, "category_id"=><BSON::ObjectId:0x70284477842000 data=559c0ce6536861022a000000>}] flags=[]
+ 14389                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9440ms
+ 14390: Redirected to http://localhost:3000/
+ 14391  Completed 302 Found in 4392ms
+ 14392  
+ .....
+ 14409    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70284503171500 data=559c0d00536861022a000002>, "question_id"=><BSON::ObjectId:0x70284503161640 data=559c0cfa536861022a000001>, "yes"=>true, "ip"=>"::1"}] flags=[]
+ 14410                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6040ms
+ 14411: Redirected to http://localhost:3000/
+ 14412  Completed 302 Found in 3ms
+ 14413  
+ .....
+ 14515    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70284504373740 data=559c1369536861022a000003>, "text"=>"Is peace really the fundament of good sportsmanship", "user_id"=><BSON::ObjectId:0x70284505142880 data=5595c5445368610603000000>, "category_id"=><BSON::ObjectId:0x70284519939260 data=559b225a5368610302000001>}] flags=[]
+ 14516                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.8130ms
+ 14517: Redirected to http://localhost:3000/
+ 14518  Completed 302 Found in 4776ms
+ 14519  
+ .....
+ 14541    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70284518380840 data=559c136f536861022a000004>, "question_id"=><BSON::ObjectId:0x70284518379140 data=559c1369536861022a000003>, "yes"=>true, "ip"=>"::1"}] flags=[]
+ 14542                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6120ms
+ 14543: Redirected to http://localhost:3000/
+ 14544  Completed 302 Found in 4ms
+ 14545  
+ .....
+ 14618    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70284504153440 data=559c14b4536861022a000005>, "question_id"=><BSON::ObjectId:0x70284504152640 data=559c0cfa536861022a000001>, "yes"=>true, "ip"=>"127.0.0.1"}] flags=[]
+ 14619                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5410ms
+ 14620: Redirected to http://localhost:3000/
+ 14621  Completed 302 Found in 4ms
+ 14622  
+ .....
+ 14644    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70284502863580 data=559c14b6536861022a000006>, "question_id"=><BSON::ObjectId:0x70284502861900 data=559c1369536861022a000003>, "yes"=>false, "ip"=>"127.0.0.1"}] flags=[]
+ 14645                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5100ms
+ 14646: Redirected to http://localhost:3000/
+ 14647  Completed 302 Found in 3ms
+ 14648  
+ .....
+ 14761    Parameters: {"authenticity_token"=>"2u1ze31FfCcWOjov8A3sTlmGVXn7/pPmzV8N9T+7ix+SinnxN0UNIJzKhIwizyavCZQ2TPnAGvk0vZuxcp0nGw=="}
+ 14762    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70284504634820 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5570ms
+ 14763: Redirected to http://localhost:3000/
+ 14764  Completed 302 Found in 5ms
+ 14765  
+ .....
+ 14848    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70284518752320 data=559c1537536861022a000007>, "text"=>"Will hollywood go down in the next decade?", "user_id"=><BSON::ObjectId:0x70284504031120 data=5595c5445368610603000000>, "category_id"=><BSON::ObjectId:0x70284501097360 data=559b223d5368610302000000>}] flags=[]
+ 14849                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6140ms
+ 14850: Redirected to http://localhost:3000/
+ 14851  Completed 302 Found in 66781ms
+ 14852  
+ .....
+ 14890    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70284518687280 data=559c154f536861022a000008>, "question_id"=><BSON::ObjectId:0x70284477242940 data=559c1537536861022a000007>, "yes"=>false, "ip"=>"::1"}] flags=[]
+ 14891                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6320ms
+ 14892: Redirected to http://localhost:3000/
+ 14893  Completed 302 Found in 4ms
+ 14894  
+ .....
+ 14939    Parameters: {"authenticity_token"=>"w7Aebc+DgAD/psV1dN7IIeeJDiz1EJo9uisteQ3hiSHp+ESe3LZM5o8FUPUSlzpu5tp+VqoZVsbmdOvBonu1Aw=="}
+ 14940    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70284504369680 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5630ms
+ 14941: Redirected to http://localhost:3000/
+ 14942  Completed 302 Found in 4ms
+ 14943  
+ .....
+ 15103    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70284477402340 data=559c1660536861022a000009>} update={"$set"=>{"last_sign_in_at"=>2015-07-07 18:11:44 UTC, "current_sign_in_at"=>2015-07-07 18:11:44 UTC, "last_sign_in_ip"=>"::1", "current_sign_in_ip"=>"::1", "sign_in_count"=>1}} flags=[]
+ 15104                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9440ms
+ 15105: Redirected to http://localhost:3000/
+ 15106  Completed 302 Found in 117ms
+ 15107  
+ .....
+ 15185    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=categories documents=[{"_id"=><BSON::ObjectId:0x70284505680060 data=559c1696536861022a00000a>, "category"=>"Random"}] flags=[]
+ 15186                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6390ms
+ 15187: Redirected to http://localhost:3000/categories/559c1696536861022a00000a
+ 15188  Completed 302 Found in 3ms
+ 15189  
+ .....
+ 15225    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70284500373300 data=559c16ac536861022a00000b>, "text"=>"Is b@b.b a good email address?", "user_id"=><BSON::ObjectId:0x70284500305580 data=559c1660536861022a000009>, "category_id"=><BSON::ObjectId:0x70284500244460 data=559c1696536861022a00000a>}] flags=[]
+ 15226                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5440ms
+ 15227: Redirected to http://localhost:3000/
+ 15228  Completed 302 Found in 7ms
+ 15229  
+ .....
+ 15263    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70284520344340 data=559c16bd536861022a00000c>, "question_id"=><BSON::ObjectId:0x70284520343680 data=559c16ac536861022a00000b>, "yes"=>true, "ip"=>"::1"}] flags=[]
+ 15264                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.7260ms
+ 15265: Redirected to http://localhost:3000/
+ 15266  Completed 302 Found in 3ms
+ 15267  
+ .....
+ 15876    Parameters: {"authenticity_token"=>"yoGtQ/9hqzs6XCj+4Lm7O/dUX1dPZoemP+hrpPaKp6H7dtgrAXk1EcOS5trYQw2ifwT5I2uckLmg+pMhyr7t4Q=="}
+ 15877    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70102199801660 data=559c1660536861022a000009>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5400ms
+ 15878: Redirected to http://localhost:3000/
+ 15879  Filter chain halted as :require_no_authentication rendered or redirected
+ 15880  Completed 302 Found in 3ms
+ .....
+ 15941    Parameters: {"authenticity_token"=>"qFk/x2rgbfnbM7/6bXTTeIyO3hIbjzbZNhslboS358CZrkqvlPjz0yL9cd5VjmXhBN54Zj91IcapCd3ruIOtgA=="}
+ 15942    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70102216073500 data=559c1660536861022a000009>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5960ms
+ 15943: Redirected to http://localhost:3000/
+ 15944  Filter chain halted as :require_no_authentication rendered or redirected
+ 15945  Completed 302 Found in 4ms
+ .....
+ 15978    Parameters: {"authenticity_token"=>"LBTfwOPGs6jjburJEHzHOgtoySwzrhOTkcnFb23l9OQd46qoHd4tghqgJO0ohnGjgzhvWBdUBIwO2z3qUdG+pA=="}
+ 15979    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70102183192380 data=559c1660536861022a000009>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5600ms
+ 15980: Redirected to http://localhost:3000/
+ 15981  Filter chain halted as :require_no_authentication rendered or redirected
+ 15982  Completed 302 Found in 3ms
+ .....
+ 16015    Parameters: {"authenticity_token"=>"8vfMNfMEzKb7wDwFgLYqD8EkwH6PBlJeK4wkviqMW0bDALldDRxSjAIO8iG4TJyWSXRmCqv8RUG0ntw7FrgRBg=="}
+ 16016    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70102214732060 data=559c1660536861022a000009>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5350ms
+ 16017: Redirected to http://localhost:3000/
+ 16018  Filter chain halted as :require_no_authentication rendered or redirected
+ 16019  Completed 302 Found in 2ms
+ .....
+ 16063    Parameters: {"authenticity_token"=>"bepHBuEoJc0VYNtiXHR4Imvp3ite7R86CuQ2vK6x6HNcHTJuHzC75+yuFUZkjs6747l4X3oXCCWV9s45koWiMw=="}
+ 16064    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70102215948640 data=559c1660536861022a000009>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7810ms
+ 16065: Redirected to http://localhost:3000/
+ 16066  Filter chain halted as :require_no_authentication rendered or redirected
+ 16067  Completed 302 Found in 3ms
+ .....
+ 16100    Parameters: {"authenticity_token"=>"N+kvOqn31DAzSjW5HLLmGImh/VBIM8y7AWm3RJrYKycGHlpSV+9KGsqE+50kSFCBAfFbJGzJ26See0/BpuxhZw=="}
+ 16101    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70102214911540 data=559c1660536861022a000009>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5350ms
+ 16102: Redirected to http://localhost:3000/
+ 16103  Filter chain halted as :require_no_authentication rendered or redirected
+ 16104  Completed 302 Found in 2ms
+ .....
+ 16139    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70102213498920 data=559c1660536861022a000009>} update={"$set"=>{"admin"=>false}} flags=[]
+ 16140                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9620ms
+ 16141: Redirected to http://localhost:3000/
+ 16142  Completed 302 Found in 25ms
+ 16143  
+ .....
+ 16186    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70102225669440 data=559c1da453686102ea000002>} update={"$set"=>{"last_sign_in_at"=>2015-07-07 18:42:44 UTC, "current_sign_in_at"=>2015-07-07 18:42:44 UTC, "last_sign_in_ip"=>"::1", "current_sign_in_ip"=>"::1", "sign_in_count"=>1}} flags=[]
+ 16187                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6750ms
+ 16188: Redirected to http://localhost:3000/
+ 16189  Completed 302 Found in 273ms
+ 16190  
+ .....
+ 16336  Processing by RailsAdmin::MainController#dashboard as HTML
+ 16337    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70258862839620 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5310ms
+ 16338: Redirected to http://localhost:3000/users/sign_in
+ 16339  Filter chain halted as :_authorize! rendered or redirected
+ 16340  Completed 302 Found in 3ms
+ .....
+ 16344  Processing by Devise::SessionsController#new as HTML
+ 16345    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70258910973500 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6310ms
+ 16346: Redirected to http://localhost:3000/
+ 16347  Filter chain halted as :require_no_authentication rendered or redirected
+ 16348  Completed 302 Found in 144ms
+ .....
+ 16353    MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4800ms
+ 16354    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70258862967280 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5270ms
+ 16355: Redirected to http://localhost:3000/users/sign_in
+ 16356  Filter chain halted as :_authorize! rendered or redirected
+ 16357  Completed 302 Found in 3ms
+ .....
+ 16361  Processing by Devise::SessionsController#new as HTML
+ 16362    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70258872891560 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5530ms
+ 16363: Redirected to http://localhost:3000/
+ 16364  Filter chain halted as :require_no_authentication rendered or redirected
+ 16365  Completed 302 Found in 3ms
+ .....
+ 16397  Processing by RailsAdmin::MainController#dashboard as HTML
+ 16398    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70258897683200 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5180ms
+ 16399: Redirected to http://localhost:3000/users/sign_in
+ 16400  Filter chain halted as :_authorize! rendered or redirected
+ 16401  Completed 302 Found in 3ms
+ .....
+ 16405  Processing by Devise::SessionsController#new as HTML
+ 16406    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70258908749340 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8910ms
+ 16407: Redirected to http://localhost:3000/
+ 16408  Filter chain halted as :require_no_authentication rendered or redirected
+ 16409  Completed 302 Found in 4ms
+ .....
+ 16413  Processing by RailsAdmin::MainController#dashboard as HTML
+ 16414    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70258897453260 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7270ms
+ 16415: Redirected to http://localhost:3000/users/sign_in
+ 16416  Filter chain halted as :_authorize! rendered or redirected
+ 16417  Completed 302 Found in 4ms
+ .....
+ 16421  Processing by Devise::SessionsController#new as HTML
+ 16422    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70258897256720 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6480ms
+ 16423: Redirected to http://localhost:3000/
+ 16424  Filter chain halted as :require_no_authentication rendered or redirected
+ 16425  Completed 302 Found in 3ms
+ .....
+ 16496  Processing by RailsAdmin::MainController#dashboard as HTML
+ 16497    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70317874020600 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5480ms
+ 16498: Redirected to http://localhost:3000/users/sign_in
+ 16499  Filter chain halted as :_authorize! rendered or redirected
+ 16500  Completed 302 Found in 3ms
+ .....
+ 16504  Processing by Devise::SessionsController#new as HTML
+ 16505    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70317854643160 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6390ms
+ 16506: Redirected to http://localhost:3000/
+ 16507  Filter chain halted as :require_no_authentication rendered or redirected
+ 16508  Completed 302 Found in 18ms
+ .....
+ 16512  Processing by RailsAdmin::MainController#dashboard as HTML
+ 16513    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70317874227600 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5560ms
+ 16514: Redirected to http://localhost:3000/users/sign_in
+ 16515  Filter chain halted as :_authorize! rendered or redirected
+ 16516  Completed 302 Found in 2ms
+ .....
+ 16520  Processing by Devise::SessionsController#new as HTML
+ 16521    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70317827033280 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5990ms
+ 16522: Redirected to http://localhost:3000/
+ 16523  Filter chain halted as :require_no_authentication rendered or redirected
+ 16524  Completed 302 Found in 2ms
+ .....
+ 16557    Parameters: {"authenticity_token"=>"Lx1poighWQU578ulaQe3HuCINivdwXxzPlirE/FM8PqU2OKFVzvi5kUd9OxyNwcU+StYC7TfJrdvt5pMhQvocw=="}
+ 16558    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70317852870520 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5370ms
+ 16559: Redirected to http://localhost:3000/
+ 16560  Completed 302 Found in 8ms
+ 16561  
+ .....
+ 16602    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70317854414600 data=5595c5445368610603000000>} update={"$set"=>{"last_sign_in_at"=>2015-07-07 17:30:26 UTC, "current_sign_in_at"=>2015-07-07 18:47:06 UTC, "sign_in_count"=>11}} flags=[]
+ 16603                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 1.1520ms
+ 16604: Redirected to http://localhost:3000/
+ 16605  Completed 302 Found in 275ms
+ 16606  
+ .....
+ 16669    Parameters: {"authenticity_token"=>"76i4HKdZJbrP4eOYDObd9J71u/GUr+NexMW65gNYBkeug3ynq0H1+fmJzg65h78QGZ2LZkQTaD67OVGdOP4uKw=="}
+ 16670    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70317901795540 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5510ms
+ 16671: Redirected to http://localhost:3000/
+ 16672  Completed 302 Found in 3ms
+ 16673  
+ .....
+ 16714    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70317818082000 data=559c1da453686102ea000002>} update={"$set"=>{"current_sign_in_at"=>2015-07-07 18:48:00 UTC, "sign_in_count"=>2}} flags=[]
+ 16715                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9990ms
+ 16716: Redirected to http://localhost:3000/
+ 16717  Completed 302 Found in 124ms
+ 16718  
+ .....
+ 16784    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70317882611540 data=559c1f965368610333000000>, "text"=>"Are species of animal dieing out unimportant to human civilization", "user_id"=><BSON::ObjectId:0x70317882640640 data=559c1da453686102ea000002>, "category_id"=><BSON::ObjectId:0x70317882655640 data=559c1696536861022a00000a>}] flags=[]
+ 16785                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.8160ms
+ 16786: Redirected to http://localhost:3000/
+ 16787  Completed 302 Found in 8ms
+ 16788  
+ .....
+ 16860    MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4530ms
+ 16861    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70317883655600 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7610ms
+ 16862: Redirected to http://localhost:3000/users/sign_in
+ 16863  Filter chain halted as :_authorize! rendered or redirected
+ 16864  Completed 302 Found in 3ms
+ .....
+ 16868  Processing by Devise::SessionsController#new as HTML
+ 16869    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70317883594100 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5230ms
+ 16870: Redirected to http://localhost:3000/
+ 16871  Filter chain halted as :require_no_authentication rendered or redirected
+ 16872  Completed 302 Found in 2ms
+ .....
+ 16943    Parameters: {"model_name"=>"category"}
+ 16944    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70317891371920 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5220ms
+ 16945: Redirected to http://localhost:3000/users/sign_in
+ 16946  Filter chain halted as :_authorize! rendered or redirected
+ 16947  Completed 302 Found in 2ms
+ .....
+ 16951  Processing by Devise::SessionsController#new as HTML
+ 16952    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70317890966840 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8340ms
+ 16953: Redirected to http://localhost:3000/
+ 16954  Filter chain halted as :require_no_authentication rendered or redirected
+ 16955  Completed 302 Found in 2ms
+ .....
+ 16960    Parameters: {"model_name"=>"vote_detail"}
+ 16961    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70317902827700 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6780ms
+ 16962: Redirected to http://localhost:3000/users/sign_in
+ 16963  Filter chain halted as :_authorize! rendered or redirected
+ 16964  Completed 302 Found in 3ms
+ .....
+ 16968  Processing by Devise::SessionsController#new as HTML
+ 16969    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70317890487280 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5260ms
+ 16970: Redirected to http://localhost:3000/
+ 16971  Filter chain halted as :require_no_authentication rendered or redirected
+ 16972  Completed 302 Found in 2ms
+ .....
+ 16977    Parameters: {"authenticity_token"=>"ZSQ+PRidgy7IPnIPuKccY+vT+NYo4Q1bEu0W6fKGMy2PmvX2+rhXU4AZvLvGpJpD1eeX4wQudr5pBEyYvTGx8Q=="}
+ 16978    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70317896468440 data=559c1da453686102ea000002>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5050ms
+ 16979: Redirected to http://localhost:3000/
+ 16980  Completed 302 Found in 3ms
+ 16981  
+ .....
+ 17027    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70317852585340 data=5595c5445368610603000000>} update={"$set"=>{"last_sign_in_at"=>2015-07-07 18:47:06 UTC, "current_sign_in_at"=>2015-07-07 18:52:50 UTC, "sign_in_count"=>12}} flags=[]
+ 17028                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.8470ms
+ 17029: Redirected to http://localhost:3000/
+ 17030  Completed 302 Found in 112ms
+ 17031  
+ .....
+ 17607    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70166492600840 data=559c27135368610365000000>, "question_id"=><BSON::ObjectId:0x70166492600160 data=559c0cfa536861022a000001>, "yes"=>false}] flags=[]
+ 17608                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6680ms
+ 17609: Redirected to http://localhost:3000/
+ 17610  Completed 302 Found in 6ms
+ 17611  
+ .....
+ 17863    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70153549448900 data=559c296c53686103ab000000>, "question_id"=><BSON::ObjectId:0x70153549447200 data=559c1537536861022a000007>, "yes"=>true}] flags=[]
+ 17864                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6320ms
+ 17865: Redirected to http://localhost:3000/questions/559c1537536861022a000007
+ 17866  Completed 302 Found in 6ms
+ 17867  
+ .....
+ 17921    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70153530106680 data=559c297953686103ab000001>, "question_id"=><BSON::ObjectId:0x70153530105980 data=559c1f965368610333000000>, "yes"=>true, "ip"=>"::1"}] flags=[]
+ 17922                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5690ms
+ 17923: Redirected to http://localhost:3000/
+ 17924  Completed 302 Found in 4ms
+ 17925  
+ .....
+ 18166    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70153528999540 data=559c29d053686103ab000002>, "question_id"=><BSON::ObjectId:0x70153528998780 data=559c1369536861022a000003>, "yes"=>true}] flags=[]
+ 18167                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5470ms
+ 18168: Redirected to http://localhost:3000/questions/559c1369536861022a000003
+ 18169  Completed 302 Found in 3ms
+ 18170  
+ .....
+ 18206    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70153500521080 data=559c29dd53686103ab000003>, "question_id"=><BSON::ObjectId:0x70153500519460 data=559c1f965368610333000000>, "yes"=>true}] flags=[]
+ 18207                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6540ms
+ 18208: Redirected to http://localhost:3000/questions/559c1f965368610333000000
+ 18209  Completed 302 Found in 3ms
+ 18210  
+ .....
+ 18323    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70153549028480 data=559c2a3053686103ab000004>, "text"=>"Is this world crazy?", "user_id"=><BSON::ObjectId:0x70153548975280 data=5595c5445368610603000000>, "category_id"=><BSON::ObjectId:0x70153548927320 data=559c1696536861022a00000a>}] flags=[]
+ 18324                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5840ms
+ 18325: Redirected to http://localhost:3000/
+ 18326  Completed 302 Found in 7ms
+ 18327  
+ .....
+ 18386    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70153551133580 data=559c2a3553686103ab000005>, "question_id"=><BSON::ObjectId:0x70153551132480 data=559c2a3053686103ab000004>, "yes"=>true}] flags=[]
+ 18387                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5050ms
+ 18388: Redirected to http://localhost:3000/questions/559c2a3053686103ab000004
+ 18389  Completed 302 Found in 3ms
+ 18390  
+ .....
+ 18588    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70153569745100 data=559c2ae053686103ab000006>, "question_id"=><BSON::ObjectId:0x70153569744440 data=559c2a3053686103ab000004>, "yes"=>true, "ip"=>"::1"}] flags=[]
+ 18589                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6530ms
+ 18590: Redirected to http://localhost:3000/
+ 18591  Completed 302 Found in 3ms
+ 18592  
+ .....
+ 18650    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70153576567080 data=559c2bc853686103ab000007>, "text"=>"Should we migrate to a different planet", "user_id"=><BSON::ObjectId:0x70153576451640 data=5595c5445368610603000000>, "category_id"=><BSON::ObjectId:0x70153576401040 data=559c1696536861022a00000a>}] flags=[]
+ 18651                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 11.9010ms
+ 18652: Redirected to http://localhost:3000/
+ 18653  Completed 302 Found in 21ms
+ 18654  
+ .....
+ 18718    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70153548962500 data=559c2bda53686103ab000008>, "question_id"=><BSON::ObjectId:0x70153548960620 data=559c2bc853686103ab000007>, "yes"=>false}] flags=[]
+ 18719                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5690ms
+ 18720: Redirected to http://localhost:3000/questions/559c2bc853686103ab000007
+ 18721  Completed 302 Found in 3ms
+ 18722  
+ .....
+ 18802    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70153559480840 data=559c2c5d53686103ab000009>, "question_id"=><BSON::ObjectId:0x70153559480180 data=559c2bc853686103ab000007>, "yes"=>false, "ip"=>"::1"}] flags=[]
+ 18803                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.4880ms
+ 18804: Redirected to http://localhost:3000/
+ 18805  Completed 302 Found in 3ms
+ 18806  
+ .....
+ 18897    Parameters: {"authenticity_token"=>"6SG3PhT1aMydVPHd+SbHns5vteBTdZAg+rweGbTedcW3V16tn1qWgoT2ckCRBgF5Z70dRBF7lfMO2jc3qa+KuQ=="}
+ 18898    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70153549820360 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7630ms
+ 18899: Redirected to http://localhost:3000/
+ 18900  Filter chain halted as :require_no_authentication rendered or redirected
+ 18901  Completed 302 Found in 3ms
+ .....
+ 18964    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70153559807460 data=559c2cef53686103ab00000a>, "text"=>"addd", "user_id"=><BSON::ObjectId:0x70153559610940 data=5595c5445368610603000000>, "category_id"=><BSON::ObjectId:0x70153551115940 data=559c1696536861022a00000a>}] flags=[]
+ 18965                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.7130ms
+ 18966: Redirected to http://localhost:3000/
+ 18967  Completed 302 Found in 7ms
+ 18968  
+ .....
+ 19037    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70153578370380 data=559c2cf353686103ab00000b>, "question_id"=><BSON::ObjectId:0x70153578369700 data=559c2cef53686103ab00000a>, "yes"=>true, "ip"=>"::1"}] flags=[]
+ 19038                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9240ms
+ 19039: Redirected to http://localhost:3000/questions/559c2cef53686103ab00000a
+ 19040  Completed 302 Found in 4ms
+ 19041  
+ .....
+ 19299    Parameters: {"authenticity_token"=>"jO9UwoQ9xmiZvWJZxVVSeFuVKDWd/yubrnYRMzg6WpXSmb1RD5I4JoAf4cStdZSf8keAkd/xLkhaEDgdJUul6Q=="}
+ 19300    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70153560763160 data=5595c5445368610603000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5790ms
+ 19301: Redirected to http://localhost:3000/
+ 19302  Completed 302 Found in 14ms
+ 19303  
+ .....
+ 19375    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70153579630660 data=559c2df553686103ab00000c>} update={"$set"=>{"last_sign_in_at"=>2015-07-07 19:52:21 UTC, "current_sign_in_at"=>2015-07-07 19:52:21 UTC, "last_sign_in_ip"=>"::1", "current_sign_in_ip"=>"::1", "sign_in_count"=>1}} flags=[]
+ 19376                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6860ms
+ 19377: Redirected to http://localhost:3000/
+ 19378  Completed 302 Found in 122ms
+ 19379  
+ .....
+ 19513    Parameters: {"authenticity_token"=>"5DXthTLY7f/At3MWbBzYTOo7Wy2VjgfxKhf79Td7wBqTOWKxiXiSFE7yi4EI5ciidcQ39faVEz9NzO/VSLnKPQ=="}
+ 19514    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70239366328680 data=559c2df553686103ab00000c>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5730ms
+ 19515: Redirected to http://localhost:3000/
+ 19516  Completed 302 Found in 136ms
+ 19517  
+ .....
+ 19680    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70303741791560 data=559d79625368610278000000>} update={"$set"=>{"last_sign_in_at"=>2015-07-08 19:26:26 UTC, "current_sign_in_at"=>2015-07-08 19:26:26 UTC, "last_sign_in_ip"=>"::1", "current_sign_in_ip"=>"::1", "sign_in_count"=>1}} flags=[]
+ 19681                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 37.6990ms
+ 19682: Redirected to http://localhost:3000/
+ 19683  Completed 302 Found in 250ms
+ 19684  
+ .....
+ 19832    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=categories documents=[{"_id"=><BSON::ObjectId:0x70303712521760 data=559d797c5368610278000001>, "category"=>"Entertainment"}] flags=[]
+ 19833                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 63.3510ms
+ 19834: Redirected to http://localhost:3000/categories/559d797c5368610278000001
+ 19835  Completed 302 Found in 66ms
+ 19836  
+ .....
+ 20113    MOPED: 127.0.0.1:27017 DELETE       database=vote_development collection=categories selector={"_id"=><BSON::ObjectId:0x70362870425960 data=559d797c5368610278000001>} flags=[:remove_first]
+ 20114                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 67.3500ms
+ 20115: Redirected to http://localhost:3000/categories
+ 20116  Completed 302 Found in 74ms
+ 20117  
+ .....
+ 20707    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70174131279460 data=559d7c2253686102dd000001>, "text"=>"pictures?", "user_id"=><BSON::ObjectId:0x70174131434940 data=559d79625368610278000000>, "category_id"=><BSON::ObjectId:0x70174131563300 data=559d7a2853686102ac000002>}] flags=[]
+ 20708                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6480ms
+ 20709: Redirected to http://localhost:3000/
+ 20710  Completed 302 Found in 205ms
+ 20711  
+ .....
+ 20764    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70174108667500 data=559d7c7c53686102dd000002>, "text"=>"asdsa", "user_id"=><BSON::ObjectId:0x70174167080060 data=559d79625368610278000000>, "category_id"=><BSON::ObjectId:0x70174101041960 data=559d7a2853686102ac000000>}] flags=[]
+ 20765                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9850ms
+ 20766: Redirected to http://localhost:3000/
+ 20767  Completed 302 Found in 175663ms
+ 20768  
+ .....
+ 20838    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70175619007080 data=559d7d4353686102ff000000>, "text"=>"Is hollywood going die anytime soon?", "user_id"=><BSON::ObjectId:0x70175618880520 data=559d79625368610278000000>, "category_id"=><BSON::ObjectId:0x70175618782900 data=559d7a2853686102ac000000>}] flags=[]
+ 20839                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5080ms
+ 20840: Redirected to http://localhost:3000/
+ 20841  Completed 302 Found in 7247ms
+ 20842  
+ .....
+ 21022    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70175626254840 data=559d7e4153686102ff000001>, "text"=>"adaddd", "user_id"=><BSON::ObjectId:0x70175626119180 data=559d79625368610278000000>, "category_id"=><BSON::ObjectId:0x70175626104980 data=559d7a2853686102ac000002>}] flags=[]
+ 21023                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.8040ms
+ 21024: Redirected to http://localhost:3000/
+ 21025  Completed 302 Found in 57709ms
+ 21026  
+ .....
+ 21054    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70175576721160 data=559d7e8753686102ff000002>, "text"=>"Is python one of the greatest wonders of this world?", "user_id"=><BSON::ObjectId:0x70175639850900 data=559d79625368610278000000>, "category_id"=><BSON::ObjectId:0x70175599339000 data=559d7a2853686102ac000000>}] flags=[]
+ 21055                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6030ms
+ 21056: Redirected to http://localhost:3000/
+ 21057  Completed 302 Found in 4118ms
+ 21058  
+ .....
+ 21131    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70175649916200 data=559d7eb153686102ff000003>, "text"=>"is this world going to be gone soon?", "user_id"=><BSON::ObjectId:0x70175641834720 data=559d79625368610278000000>, "category_id"=><BSON::ObjectId:0x70175649935300 data=559d7a2853686102ac000002>}] flags=[]
+ 21132                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5940ms
+ 21133: Redirected to http://localhost:3000/
+ 21134  Completed 302 Found in 3782ms
+ 21135  
+ .....
+ 21213    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70175619994080 data=559d7ef053686102ff000004>, "text"=>"Do we need to support people in Africa?", "user_id"=><BSON::ObjectId:0x70175604407800 data=559d79625368610278000000>, "category_id"=><BSON::ObjectId:0x70175568982280 data=559d7a2853686102ac000002>}] flags=[]
+ 21214                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6260ms
+ 21215: Redirected to http://localhost:3000/
+ 21216  Completed 302 Found in 2849ms
+ 21217  
+ .....
+ 21328    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70175621152380 data=559d7f7653686102ff000005>, "text"=>"picturess?", "user_id"=><BSON::ObjectId:0x70175620516900 data=559d79625368610278000000>, "category_id"=><BSON::ObjectId:0x70175637979480 data=559d7a2853686102ac000000>}] flags=[]
+ 21329                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.7030ms
+ 21330: Redirected to http://localhost:3000/
+ 21331  Completed 302 Found in 2805ms
+ 21332  
+ .....
+ 21501    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70225270654400 data=559d89bd5368610453000000>, "text"=>"asda", "user_id"=><BSON::ObjectId:0x70225270557080 data=559d79625368610278000000>, "category_id"=><BSON::ObjectId:0x70225270524840 data=559d7a2853686102ac000000>}] flags=[]
+ 21502                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.7440ms
+ 21503: Redirected to http://localhost:3000/
+ 21504  Completed 302 Found in 908ms
+ 21505  
+ .....
+ 21597    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70225224673960 data=559d89e05368610453000001>, "text"=>"picc", "user_id"=><BSON::ObjectId:0x70225254160840 data=559d79625368610278000000>, "category_id"=><BSON::ObjectId:0x70225254142700 data=559d7a2853686102ac000000>}] flags=[]
+ 21598                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.4830ms
+ 21599: Redirected to http://localhost:3000/
+ 21600  Completed 302 Found in 573ms
+ 21601  
+ .....
+ 22110    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70250120888500 data=559da56377696605ad000003>, "question_id"=><BSON::ObjectId:0x70250091486680 data=559d7a4953686102ad000000>, "yes"=>true, "ip"=>"::1"}] flags=[]
+ 22111                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 63.3960ms
+ 22112: Redirected to http://localhost:3000/questions/559d7a4953686102ad000000
+ 22113  Completed 302 Found in 67ms
+ 22114  
+ .....
+ 23163    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70250077418940 data=559da6ee77696605ad000006>}] flags=[]
+ 23164                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6510ms
+ 23165: Redirected to http://localhost:3000/
+ 23166  Completed 302 Found in 3ms
+ 23167  
+ .....
+ 23564    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70250111505180 data=559da75577696605ad000009>}] flags=[]
+ 23565                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5960ms
+ 23566: Redirected to http://localhost:3000/questions/559d7a4953686102ad000000
+ 23567  Completed 302 Found in 10ms
+ 23568  
+ .....
+ 23812    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70179797665580 data=559e1a1e5368610694000000>}] flags=[]
+ 23813                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 1.2860ms
+ 23814: Redirected to http://localhost:3000/questions/559d7a4953686102ad000000
+ 23815  Completed 302 Found in 232820ms
+ 23816  
+ .....
+ 23836    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70179826306800 data=559e1a345368610694000001>, "text"=>"asdad"}] flags=[]
+ 23837                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 1.0610ms
+ 23838: Redirected to http://localhost:3000/questions/559d7a4953686102ad000000
+ 23839  Completed 302 Found in 16678ms
+ 23840  
+ .....
+ 24011    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70135034515080 data=559e2eac536861072c000001>, "text"=>"asdad"}] flags=[]
+ 24012                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 110.6500ms
+ 24013: Redirected to http://localhost:3000/questions/559d7a4953686102ad000000
+ 24014  Completed 302 Found in 57645ms
+ 24015  
+ .....
+ 24035    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70134979487200 data=559e2ec3536861072c000002>, "text"=>"adadad", "question_id"=><BSON::ObjectId:0x70135035730540 data=559d7a4953686102ad000000>, "user_id"=><BSON::ObjectId:0x70135035726640 data=559d79625368610278000000>}] flags=[]
+ 24036                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.8900ms
+ 24037: Redirected to http://localhost:3000/questions/559d7a4953686102ad000000
+ 24038  Completed 302 Found in 19201ms
+ 24039  
+ .....
+ 24104    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70135012524700 data=559e2fa1536861072c000003>, "text"=>"adadadadad", "question_id"=><BSON::ObjectId:0x70134980376580 data=559d7a4953686102ad000000>, "user_id"=><BSON::ObjectId:0x70134980375020 data=559d79625368610278000000>}] flags=[]
+ 24105                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9400ms
+ 24106: Redirected to http://localhost:3000/questions/559d7a4953686102ad000000
+ 24107  Completed 302 Found in 3060ms
+ 24108  
+ .....
+ 24379    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70135058683240 data=559e3045536861072c000004>, "text"=>"addd", "question_id"=><BSON::ObjectId:0x70135058682180 data=559d7aca53686102ca000001>, "user_id"=><BSON::ObjectId:0x70135058680620 data=559d79625368610278000000>}] flags=[]
+ 24380                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.8590ms
+ 24381: Redirected to http://localhost:3000/questions/559d7aca53686102ca000001
+ 24382  Completed 302 Found in 3001ms
+ 24383  
+ .....
+ 24514    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70135014365480 data=559e3053536861072c000005>, "text"=>"asss", "question_id"=><BSON::ObjectId:0x70135014362620 data=559d7a4953686102ad000000>, "user_id"=><BSON::ObjectId:0x70135014361460 data=559d79625368610278000000>}] flags=[]
+ 24515                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9740ms
+ 24516: Redirected to http://localhost:3000/questions/559d7a4953686102ad000000
+ 24517  Completed 302 Found in 4800ms
+ 24518  
+ .....
+ 24557    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70134993733860 data=559e3096536861072c000006>, "question_id"=><BSON::ObjectId:0x70134993733180 data=559d7a4953686102ad000000>, "yes"=>true, "ip"=>"127.0.0.1"}] flags=[]
+ 24558                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 7.5080ms
+ 24559: Redirected to http://localhost:3000/questions/559d7a4953686102ad000000
+ 24560  Completed 302 Found in 10ms
+ 24561  
+ .....
+ 24582    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70135032388180 data=559e30a2536861072c000007>, "text"=>"piccc", "question_id"=><BSON::ObjectId:0x70135032387140 data=559d7a4953686102ad000000>, "user_id"=><BSON::ObjectId:0x70135032386600 data=559d79625368610278000000>}] flags=[]
+ 24583                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9410ms
+ 24584: Redirected to http://localhost:3000/questions/559d7a4953686102ad000000
+ 24585  Completed 302 Found in 4676ms
+ 24586  
+ .....
+ 24779    Parameters: {"authenticity_token"=>"TGQfWaujAlC+cgoEZ4ndTu2oMUBxyLEEhjvD8l8zefFAmlZIjrPNWhj8qQIpl87kI7be45/sgse1JRJIw/q0UQ=="}
+ 24780    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70135058565480 data=559d79625368610278000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5430ms
+ 24781: Redirected to http://localhost:3000/
+ 24782  Completed 302 Found in 17ms
+ 24783  
+ .....
+ 24881    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70135012432240 data=559e31ca536861072c000008>, "text"=>"adad", "question_id"=><BSON::ObjectId:0x70135012429460 data=559d7aca53686102ca000001>, "user_id"=><BSON::ObjectId:0x70135012428580 data=559d79625368610278000000>}] flags=[]
+ 24882                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9050ms
+ 24883: Redirected to http://localhost:3000/questions/559d7aca53686102ca000001
+ 24884  Completed 302 Found in 2880ms
+ 24885  
+ .....
+ 24907    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70135053745860 data=559e31d9536861072c000009>, "text"=>"adadadadad", "question_id"=><BSON::ObjectId:0x70135053744820 data=559d7aca53686102ca000001>, "user_id"=><BSON::ObjectId:0x70135053744280 data=559d79625368610278000000>}] flags=[]
+ 24908                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9460ms
+ 24909: Redirected to http://localhost:3000/questions/559d7aca53686102ca000001
+ 24910  Completed 302 Found in 3069ms
+ 24911  
+ .....
+ 25064    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70182590355020 data=559e330e5368610796000000>} update={"$set"=>{"last_sign_in_at"=>2015-07-09 08:38:38 UTC, "current_sign_in_at"=>2015-07-09 08:38:38 UTC, "last_sign_in_ip"=>"127.0.0.1", "current_sign_in_ip"=>"127.0.0.1", "sign_in_count"=>1}} flags=[]
+ 25065                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 139.0030ms
+ 25066: Redirected to http://localhost:3000/
+ 25067  Completed 302 Found in 277ms
+ 25068  
+ .....
+ 25171    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70182598461040 data=559e331b5368610796000001>, "text"=>"wowowowow", "question_id"=><BSON::ObjectId:0x70182598459700 data=559d7a4953686102ad000000>, "user_id"=><BSON::ObjectId:0x70182592208460 data=559d79625368610278000000>}] flags=[]
+ 25172                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 1.1010ms
+ 25173: Redirected to http://localhost:3000/questions/559d7a4953686102ad000000
+ 25174  Completed 302 Found in 3221ms
+ 25175  
+ .....
+ 25276    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70182565043960 data=559e33f05368610796000002>, "text"=>"wlwlwlwwww", "question_id"=><BSON::ObjectId:0x70182565041220 data=559d7a4953686102ad000000>, "user_id"=><BSON::ObjectId:0x70182565039440 data=559e330e5368610796000000>}] flags=[]
+ 25277                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9440ms
+ 25278: Redirected to http://localhost:3000/questions/559d7a4953686102ad000000
+ 25279  Completed 302 Found in 2827ms
+ 25280  
+ .....
+ 25598    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70182625987980 data=559e34805368610796000003>, "question_id"=><BSON::ObjectId:0x70182625987300 data=559d7a9d53686102ca000000>, "yes"=>true, "ip"=>"127.0.0.1"}] flags=[]
+ 25599                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5960ms
+ 25600: Redirected to http://localhost:3000/
+ 25601  Completed 302 Found in 3ms
+ 25602  
+ .....
+ 25701    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70182537901060 data=559e348f5368610796000004>, "text"=>"adpdid", "question_id"=><BSON::ObjectId:0x70182537869220 data=559d7a9d53686102ca000000>, "user_id"=><BSON::ObjectId:0x70182537867140 data=559e330e5368610796000000>}] flags=[]
+ 25702                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9140ms
+ 25703: Redirected to http://localhost:3000/questions/559d7a9d53686102ca000000
+ 25704  Completed 302 Found in 6524ms
+ 25705  
+ .....
+ 25727    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70182555209680 data=559e34ae5368610796000005>, "text"=>"picture", "question_id"=><BSON::ObjectId:0x70182555208640 data=559d7a9d53686102ca000000>, "user_id"=><BSON::ObjectId:0x70182555208100 data=559e330e5368610796000000>}] flags=[]
+ 25728                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9400ms
+ 25729: Redirected to http://localhost:3000/questions/559d7a9d53686102ca000000
+ 25730  Completed 302 Found in 3934ms
+ 25731  
+ .....
+ 25737    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70182609964360 data=559e34ae5368610796000006>, "text"=>"picture", "question_id"=><BSON::ObjectId:0x70182609963300 data=559d7a9d53686102ca000000>, "user_id"=><BSON::ObjectId:0x70182609962760 data=559e330e5368610796000000>}] flags=[]
+ 25738                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6380ms
+ 25739: Redirected to http://localhost:3000/questions/559d7a9d53686102ca000000
+ 25740  Completed 302 Found in 735ms
+ 25741  
+ .....
+ 25747    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70182599670820 data=559e34b05368610796000007>, "text"=>"picture", "question_id"=><BSON::ObjectId:0x70182599669760 data=559d7a9d53686102ca000000>, "user_id"=><BSON::ObjectId:0x70182599669220 data=559e330e5368610796000000>}] flags=[]
+ 25748                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6570ms
+ 25749: Redirected to http://localhost:3000/questions/559d7a9d53686102ca000000
+ 25750  Completed 302 Found in 1726ms
+ 25751  
+ .....
+ 25776    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70182592279980 data=559e34bf5368610796000008>, "text"=>"piccccccc", "question_id"=><BSON::ObjectId:0x70182592278940 data=559d7a9d53686102ca000000>, "user_id"=><BSON::ObjectId:0x70182592278400 data=559e330e5368610796000000>}] flags=[]
+ 25777                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 1.0270ms
+ 25778: Redirected to http://localhost:3000/questions/559d7a9d53686102ca000000
+ 25779  Completed 302 Found in 2708ms
+ 25780  
+ .....
+ 25805    Parameters: {"authenticity_token"=>"bM7P/tk3qpCnmxDDQHRW01wz/qX8cYJOd4zOLXlIW85dPmsd72OxcTnx7F7Hp34xW16xYwzgCXi3vc89ttmKrw=="}
+ 25806    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70182611792740 data=559e330e5368610796000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5640ms
+ 25807: Redirected to http://localhost:3000/
+ 25808  Completed 302 Found in 6ms
+ 25809  
+ .....
+ 26191    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70182622025680 data=559e330e5368610796000000>} update={"$set"=>{"current_sign_in_at"=>2015-07-09 08:50:52 UTC, "sign_in_count"=>2}} flags=[]
+ 26192                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.8420ms
+ 26193: Redirected to http://localhost:3000/
+ 26194  Completed 302 Found in 120ms
+ 26195  
+ .....
+ 26299    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70182556162160 data=559e35fe536861079600000a>, "text"=>"blabal", "question_id"=><BSON::ObjectId:0x70182556161120 data=559d7a9d53686102ca000000>, "user_id"=><BSON::ObjectId:0x70182556160580 data=559e330e5368610796000000>}] flags=[]
+ 26300                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 1.1320ms
+ 26301: Redirected to http://localhost:3000/questions/559d7a9d53686102ca000000
+ 26302  Completed 302 Found in 2933ms
+ 26303  
+ .....
+ 26452    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70182576887240 data=559e3623536861079600000b>, "text"=>"wow u r awesome!!", "question_id"=><BSON::ObjectId:0x70182576886200 data=559d7a4953686102ad000000>, "user_id"=><BSON::ObjectId:0x70182576885660 data=559e330e5368610796000000>}] flags=[]
+ 26453                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.8230ms
+ 26454: Redirected to http://localhost:3000/questions/559d7a4953686102ad000000
+ 26455  Completed 302 Found in 20370ms
+ 26456  
+ .....
+ 26484    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=comments documents=[{"_id"=><BSON::ObjectId:0x70182614407060 data=559e3636536861079600000c>, "text"=>"a@a.a is a good email!!", "question_id"=><BSON::ObjectId:0x70182614406000 data=559d7a4953686102ad000000>, "user_id"=><BSON::ObjectId:0x70182614404440 data=559e330e5368610796000000>}] flags=[]
+ 26485                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5490ms
+ 26486: Redirected to http://localhost:3000/questions/559d7a4953686102ad000000
+ 26487  Completed 302 Found in 3ms
+ 26488  
+ .....
+ 26516    Parameters: {"authenticity_token"=>"23mKAOwfynhSf50moUnzYstMDu+cwYbby3UliC0XGdj3FAUrz8SdwwT1gmWXMpRlV1kZxRjcNkvFqYUBgwelCw=="}
+ 26517    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70182625579960 data=559e330e5368610796000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7700ms
+ 26518: Redirected to http://localhost:3000/
+ 26519  Completed 302 Found in 5ms
+ 26520  
+ .....
+ 26697    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=vote_details documents=[{"_id"=><BSON::ObjectId:0x70182578079620 data=559e380d536861079600000d>, "question_id"=><BSON::ObjectId:0x70182578078940 data=559d7d4353686102ff000000>, "yes"=>true, "ip"=>"127.0.0.1"}] flags=[]
+ 26698                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.8370ms
+ 26699: Redirected to http://localhost:3000/
+ 26700  Completed 302 Found in 4ms
+ 26701  
+ .....
+ 26904    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70156259915140 data=559d79625368610278000000>} update={"$set"=>{"current_sign_in_at"=>2015-07-09 19:12:59 UTC, "sign_in_count"=>2}} flags=[]
+ 26905                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.9220ms
+ 26906: Redirected to http://localhost:3000/
+ 26907  Completed 302 Found in 222ms
+ 26908  
+ .....
+ 27045    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70156260242080 data=559ec8435368610210000001>, "text"=>"adaddd", "user_id"=><BSON::ObjectId:0x70156278046580 data=559d79625368610278000000>, "category_id"=><BSON::ObjectId:0x70156260209700 data=559d7a2853686102ac000001>}] flags=[]
+ 27046                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5780ms
+ 27047: Redirected to http://localhost:3000/
+ 27048  Completed 302 Found in 785ms
+ 27049  
+ .....
+ 27515    MOPED: 127.0.0.1:27017 INSERT       database=vote_development collection=questions documents=[{"_id"=><BSON::ObjectId:0x70204023806060 data=559ef79b53686102f6000001>, "text"=>"adadad", "user_id"=><BSON::ObjectId:0x70204088489980 data=559d79625368610278000000>, "category_id"=><BSON::ObjectId:0x70204084690400 data=559d7a2853686102ac000000>}] flags=[]
+ 27516                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.5810ms
+ 27517: Redirected to http://localhost:3000/
+ 27518  Completed 302 Found in 83ms
+ 27519  
+ .....
+ 27733    MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5530ms
+ 27734    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70365210438640 data=559d79625368610278000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5350ms
+ 27735: Redirected to http://localhost:3000/
+ 27736  Filter chain halted as :require_no_authentication rendered or redirected
+ 27737  Completed 302 Found in 165ms
+ .....
+ 27840    Parameters: {"authenticity_token"=>"sN15cChSFPwh7eweK482khWmpGfbWCle/sy8stOnSKiux0g2NuVvP6JCJxqmqzQm8OaSc5n5dD2EBXBBVfez9w=="}
+ 27841    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70365210323180 data=559d79625368610278000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5900ms
+ 27842: Redirected to http://localhost:3000/
+ 27843  Completed 302 Found in 43ms
+ 27844  
+ .....
+ 28321  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 28322  
+ 28323: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=ZoiA-D-TDyqLvmcPPc9o">Change my password</a></p>
+ 28324  
+ 28325  <p>If you didn't request this, please ignore this email.</p>
+ 28326  <p>Your password won't change until you access the link above and create a new one.</p>
+ 28327  
+ 28328: Redirected to http://localhost:3000/users/sign_in
+ 28329  Completed 302 Found in 5725ms
+ 28330  
+ .....
+ 28371    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70163203933000 data=559f00ee536861037d000000>} update={"$set"=>{"last_sign_in_at"=>2015-07-09 23:17:02 UTC, "current_sign_in_at"=>2015-07-09 23:17:02 UTC, "last_sign_in_ip"=>"127.0.0.1", "current_sign_in_ip"=>"127.0.0.1", "sign_in_count"=>1}} flags=[]
+ 28372                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.6510ms
+ 28373: Redirected to http://localhost:3000/
+ 28374  Completed 302 Found in 117ms
+ 28375  
+ .....
+ 28477    Parameters: {"authenticity_token"=>"4E+BsUsJtFPc04ntLA7qZLXljDunDVfEKl2FrkFojWZIKwEnPFvyq16iJtiBiBUIN9rb5+uaXBapS+ntPIL3dw=="}
+ 28478    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70163169769680 data=559f00ee536861037d000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.9240ms
+ 28479: Redirected to http://localhost:3000/
+ 28480  Completed 302 Found in 20ms
+ 28481  
+ .....
+ 28620  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 28621  
+ 28622: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=o5XjRTmR2WzcAAWfHeSR">Change my password</a></p>
+ 28623  
+ 28624  <p>If you didn't request this, please ignore this email.</p>
+ 28625  <p>Your password won't change until you access the link above and create a new one.</p>
+ 28626  
+ 28627: Redirected to http://localhost:3000/users/sign_in
+ 28628  Completed 302 Found in 3718ms
+ 28629  
+ .....
+ 28916  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 28917  
+ 28918: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=si2uN7VH-ds8UutURM4q">Change my password</a></p>
+ 28919  
+ 28920  <p>If you didn't request this, please ignore this email.</p>
+ .....
+ 29378  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 29379  
+ 29380: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=1PyoF7sy-mK7r_mr8zsL">Change my password</a></p>
+ 29381  
+ 29382  <p>If you didn't request this, please ignore this email.</p>
+ .....
+ 29795  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 29796  
+ 29797: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=vspK27ghdJzGyUkiJuJb">Change my password</a></p>
+ 29798  
+ 29799  <p>If you didn't request this, please ignore this email.</p>
+ .....
+ 30257  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 30258  
+ 30259: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=sKNLkYShYwmhCsPsQ1fe">Change my password</a></p>
+ 30260  
+ 30261  <p>If you didn't request this, please ignore this email.</p>
+ .....
+ 30419  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 30420  
+ 30421: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=EFJ4-uz6unD7Vsg2r1V2">Change my password</a></p>
+ 30422  
+ 30423  <p>If you didn't request this, please ignore this email.</p>
+ .....
+ 30698  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 30699  
+ 30700: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=kJqiUoBwTr2bi3GFL4_W">Change my password</a></p>
+ 30701  
+ 30702  <p>If you didn't request this, please ignore this email.</p>
+ .....
+ 31161  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 31162  
+ 31163: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=YVrZYXQN1Jj924ch18Sy">Change my password</a></p>
+ 31164  
+ 31165  <p>If you didn't request this, please ignore this email.</p>
+ 31166  <p>Your password won't change until you access the link above and create a new one.</p>
+ 31167  
+ 31168: Redirected to http://localhost:3000/users/sign_in
+ 31169  Completed 302 Found in 5374ms
+ 31170  
+ .....
+ 31198  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 31199  
+ 31200: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=X6_axZYvLh8i1uvaL4iU">Change my password</a></p>
+ 31201  
+ 31202  <p>If you didn't request this, please ignore this email.</p>
+ 31203  <p>Your password won't change until you access the link above and create a new one.</p>
+ 31204  
+ 31205: Redirected to http://localhost:3000/users/sign_in
+ 31206  Completed 302 Found in 1328ms
+ 31207  
+ .....
+ 31307  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 31308  
+ 31309: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=yUayEByco7bajihH36s-">Change my password</a></p>
+ 31310  
+ 31311  <p>If you didn't request this, please ignore this email.</p>
+ 31312  <p>Your password won't change until you access the link above and create a new one.</p>
+ 31313  
+ 31314: Redirected to http://localhost:3000/users/sign_in
+ 31315  Completed 302 Found in 5138ms
+ 31316  
+ .....
+ 31358  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 31359  
+ 31360: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=Zyr-SxaGFCAj_ZR81cBg">Change my password</a></p>
+ 31361  
+ 31362  <p>If you didn't request this, please ignore this email.</p>
+ 31363  <p>Your password won't change until you access the link above and create a new one.</p>
+ 31364  
+ 31365: Redirected to http://localhost:3000/users/sign_in
+ 31366  Completed 302 Found in 5270ms
+ 31367  
+ .....
+ 31414    MOPED: 127.0.0.1:27017 UPDATE       database=vote_development collection=users selector={"_id"=><BSON::ObjectId:0x70096492782300 data=559f093f5368610424000000>} update={"$set"=>{"last_sign_in_at"=>2015-07-09 23:52:31 UTC, "current_sign_in_at"=>2015-07-09 23:52:31 UTC, "last_sign_in_ip"=>"127.0.0.1", "current_sign_in_ip"=>"127.0.0.1", "sign_in_count"=>1}} flags=[]
+ 31415                           COMMAND      database=vote_development command={:getlasterror=>1, :w=>1} runtime: 0.8200ms
+ 31416: Redirected to http://localhost:3000/
+ 31417  Completed 302 Found in 334ms
+ 31418  
+ .....
+ 31520    Parameters: {"authenticity_token"=>"ts5guCDMfTISpff83989ZJShVp3O7fufhaDK7OTrO6oHyhvd4LsIdiKrrqZzoSW/TQnCTEDOdq3clPG/q0Wn9g=="}
+ 31521    MOPED: 127.0.0.1:27017 QUERY        database=vote_development collection=users selector={"$query"=>{"_id"=><BSON::ObjectId:0x70096483813360 data=559f093f5368610424000000>}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5130ms
+ 31522: Redirected to http://localhost:3000/
+ 31523  Completed 302 Found in 104ms
+ 31524  
+ .....
+ 31663  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 31664  
+ 31665: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=6uyBNS3kG3jmo-MFuMZW">Change my password</a></p>
+ 31666  
+ 31667  <p>If you didn't request this, please ignore this email.</p>
+ 31668  <p>Your password won't change until you access the link above and create a new one.</p>
+ 31669  
+ 31670: Redirected to http://localhost:3000/users/sign_in
+ 31671  Completed 302 Found in 6011ms
+ 31672  
+ .....
+ 31714  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 31715  
+ 31716: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=KXtUUNgyyKdysv9TrQPr">Change my password</a></p>
+ 31717  
+ 31718  <p>If you didn't request this, please ignore this email.</p>
+ .....
+ 31964  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 31965  
+ 31966: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=2UMzxfumzxALd5NcLBgZ">Change my password</a></p>
+ 31967  
+ 31968  <p>If you didn't request this, please ignore this email.</p>
+ .....
+ 32158  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 32159  
+ 32160: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=q2hx_YxWbzv8gHeRB2ys">Change my password</a></p>
+ 32161  
+ 32162  <p>If you didn't request this, please ignore this email.</p>
+ .....
+ 32535  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 32536  
+ 32537: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=khjXXMzigwyXZF8doNzt">Change my password</a></p>
+ 32538  
+ 32539  <p>If you didn't request this, please ignore this email.</p>
+ .....
+ 33116  <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+ 33117  
+ 33118: <p><a href="http://localhost:3000/users/password/edit?reset_password_token=EkvTdnnx9XEcQB15YR8T">Change my password</a></p>
+ 33119  
+ 33120  <p>If you didn't request this, please ignore this email.</p>
+
+284 matches across 5 files
+
+
+Searching 736 files for "please_change"
+
+0 matches
+
+Searching 736 files for "please-change-me"
+
+/Users/Shaun/Documents/projects/Rails Practice/vote/log/development.log:
+ 28307  Sent mail to a@a.a (4707.4ms)
+ 28308  Date: Thu, 09 Jul 2015 16:14:24 -0700
+ 28309: From: please-change-me-at-config-initializers-devise@example.com
+ 28310: Reply-To: please-change-me-at-config-initializers-devise@example.com
+ 28311  To: a@a.a
+ 28312  Message-ID: <559f0050c0848_37d3fd02377c9186098d@Shauns-MBP.mail>
+ .....
+ 28606  Sent mail to shaun965@hotmail.com (3653.8ms)
+ 28607  Date: Thu, 09 Jul 2015 16:17:14 -0700
+ 28608: From: please-change-me-at-config-initializers-devise@example.com
+ 28609: Reply-To: please-change-me-at-config-initializers-devise@example.com
+ 28610  To: shaun965@hotmail.com
+ 28611  Message-ID: <559f00fadb8d0_37d3fd02577c6dc6109c@Shauns-MBP.mail>
+ .....
+ 28902  Sent mail to shaun965@hotmail.com (6323.5ms)
+ 28903  Date: Thu, 09 Jul 2015 16:26:41 -0700
+ 28904: From: please-change-me-at-config-initializers-devise@example.com
+ 28905: Reply-To: please-change-me-at-config-initializers-devise@example.com
+ 28906  To: shaun965@hotmail.com
+ 28907  Message-ID: <559f033159967_3a63fe70c88ced426637@Shauns-MBP.mail>
+ .....
+ 29364  Sent mail to shaun965@hotmail.com (1570.7ms)
+ 29365  Date: Thu, 09 Jul 2015 16:28:00 -0700
+ 29366: From: please-change-me-at-config-initializers-devise@example.com
+ 29367: Reply-To: please-change-me-at-config-initializers-devise@example.com
+ 29368  To: shaun965@hotmail.com
+ 29369  Message-ID: <559f0380739c7_3b73ff50413a73484e4@Shauns-MBP.mail>
+ .....
+ 29781  Sent mail to shaun965@hotmail.com (4302.2ms)
+ 29782  Date: Thu, 09 Jul 2015 16:33:42 -0700
+ 29783: From: please-change-me-at-config-initializers-devise@example.com
+ 29784: Reply-To: please-change-me-at-config-initializers-devise@example.com
+ 29785  To: shaun965@hotmail.com
+ 29786  Message-ID: <559f04d6d7b70_3c83fe86821218c4841@Shauns-MBP.mail>
+ .....
+ 30243  Sent mail to shaun965@hotmail.com (1739.4ms)
+ 30244  Date: Thu, 09 Jul 2015 16:36:17 -0700
+ 30245: From: please-change-me-at-config-initializers-devise@example.com
+ 30246: Reply-To: please-change-me-at-config-initializers-devise@example.com
+ 30247  To: shaun965@hotmail.com
+ 30248  Message-ID: <559f057164620_3d73ff4a85ec91412087@Shauns-MBP.mail>
+ .....
+ 30405  Sent mail to shaun965@hotmail.com (4420.5ms)
+ 30406  Date: Thu, 09 Jul 2015 16:37:37 -0700
+ 30407: From: please-change-me-at-config-initializers-devise@example.com
+ 30408: Reply-To: please-change-me-at-config-initializers-devise@example.com
+ 30409  To: shaun965@hotmail.com
+ 30410  Message-ID: <559f05c1a2575_3e53ff7492ae5609089e@Shauns-MBP.mail>
+ .....
+ 30684  Sent mail to shaun965@hotmail.com (4756.6ms)
+ 30685  Date: Thu, 09 Jul 2015 16:40:20 -0700
+ 30686: From: please-change-me-at-config-initializers-devise@example.com
+ 30687: Reply-To: please-change-me-at-config-initializers-devise@example.com
+ 30688  To: shaun965@hotmail.com
+ 30689  Message-ID: <559f06644b0be_3ed3fecacdc60945826d@Shauns-MBP.mail>
+ .....
+ 31147  Sent mail to shaun965@hotmail.com (4578.2ms)
+ 31148  Date: Thu, 09 Jul 2015 16:45:23 -0700
+ 31149: From: please-change-me-at-config-initializers-devise@example.com
+ 31150: Reply-To: please-change-me-at-config-initializers-devise@example.com
+ 31151  To: shaun965@hotmail.com
+ 31152  Message-ID: <559f079342841_4073fd568b84f7016929@Shauns-MBP.mail>
+ .....
+ 31184  Sent mail to shaun965@hotmail.com (1264.4ms)
+ 31185  Date: Thu, 09 Jul 2015 16:45:27 -0700
+ 31186: From: please-change-me-at-config-initializers-devise@example.com
+ 31187: Reply-To: please-change-me-at-config-initializers-devise@example.com
+ 31188  To: shaun965@hotmail.com
+ 31189  Message-ID: <559f0797ef523_4073fd5673adbf41705f@Shauns-MBP.mail>
+ .....
+ 31293  Sent mail to shaun965@hotmail.com (4362.3ms)
+ 31294  Date: Thu, 09 Jul 2015 16:47:20 -0700
+ 31295: From: please-change-me-at-config-initializers-devise@example.com
+ 31296: Reply-To: please-change-me-at-config-initializers-devise@example.com
+ 31297  To: shaun965@hotmail.com
+ 31298  Message-ID: <559f0808f17b8_4183fe61918d3709361f@Shauns-MBP.mail>
+ .....
+ 31344  Sent mail to shaun965@hotmail.com (4651.0ms)
+ 31345  Date: Thu, 09 Jul 2015 16:50:22 -0700
+ 31346: From: please-change-me-at-config-initializers-devise@example.com
+ 31347: Reply-To: please-change-me-at-config-initializers-devise@example.com
+ 31348  To: shaun965@hotmail.com
+ 31349  Message-ID: <559f08bef1276_4243fc09ae6879c50831@Shauns-MBP.mail>
+ .....
+ 31649  Sent mail to shaun@getlevee.com (5881.0ms)
+ 31650  Date: Thu, 09 Jul 2015 16:52:45 -0700
+ 31651: From: please-change-me-at-config-initializers-devise@example.com
+ 31652: Reply-To: please-change-me-at-config-initializers-devise@example.com
+ 31653  To: shaun@getlevee.com
+ 31654  Message-ID: <559f094db716c_4243fc09c9f1fa45094a@Shauns-MBP.mail>
+ .....
+ 31700  Sent mail to shaun@getlevee.com (30006.2ms)
+ 31701  Date: Thu, 09 Jul 2015 16:56:18 -0700
+ 31702: From: please-change-me-at-config-initializers-devise@example.com
+ 31703: Reply-To: please-change-me-at-config-initializers-devise@example.com
+ 31704  To: shaun@getlevee.com
+ 31705  Message-ID: <559f0a22dc8ec_4243fc09d85d86851067@Shauns-MBP.mail>
+ .....
+ 31950  Sent mail to shaun965@hotmail.com (30007.0ms)
+ 31951  Date: Thu, 09 Jul 2015 16:57:20 -0700
+ 31952: From: please-change-me-at-config-initializers-devise@example.com
+ 31953: Reply-To: please-change-me-at-config-initializers-devise@example.com
+ 31954  To: shaun965@hotmail.com
+ 31955  Message-ID: <559f0a602d2bd_4243fc09d85d868511b2@Shauns-MBP.mail>
+ .....
+ 32144  Sent mail to shaun@getlevee.com (30009.7ms)
+ 32145  Date: Thu, 09 Jul 2015 17:01:27 -0700
+ 32146: From: please-change-me-at-config-initializers-devise@example.com
+ 32147: Reply-To: please-change-me-at-config-initializers-devise@example.com
+ 32148  To: shaun@getlevee.com
+ 32149  Message-ID: <559f0b57ae965_4243fc09c193ba051220@Shauns-MBP.mail>
+
+32 matches in 1 file
+
+
+Searching 736 files for "fu.com"
+
+/Users/Shaun/Documents/projects/Rails Practice/vote/log/development.log:
+ 32521  Sent mail to shaun965@hotmail.com (30030.0ms)
+ 32522  Date: Thu, 09 Jul 2015 17:04:15 -0700
+ 32523: From: whocares@fu.com
+ 32524: Reply-To: whocares@fu.com
+ 32525  To: shaun965@hotmail.com
+ 32526  Message-ID: <559f0bff13e93_4783fdafbda7d2880222@Shauns-MBP.mail>
+ .....
+ 33102  Sent mail to shaun965@hotmail.com (30051.4ms)
+ 33103  Date: Thu, 09 Jul 2015 17:51:55 -0700
+ 33104: From: whocares@fu.com
+ 33105: Reply-To: whocares@fu.com
+ 33106  To: shaun965@hotmail.com
+ 33107  Message-ID: <559f172b19a6b_5503fdf36ef0560482d2@Shauns-MBP.mail>
+
+4 matches in 1 file
+
+
+Searching 736 files for "voteyourview.herokuapp.com"
+
+/Users/Shaun/Documents/projects/Rails Practice/vote/config/environments/production.rb:
+   83    
+   84    config.action_mailer.delivery_method = :smtp
+   85:   config.action_mailer.default_url_options = { host: 'voteyourview.herokuapp.com' }
+   86  
+   87:   config.mandrill_mailer.default_url_options = { host: 'voteyourview.herokuapp.com' }
+   88  
+   89  end
+
+/Users/Shaun/Documents/projects/Rails Practice/vote/config/initializers/devise.rb:
+   11    # note that it will be overwritten if you use your own mailer class
+   12    # with default "from" parameter.
+   13:   config.mailer_sender = 'voteyourview.herokuapp.com'
+   14  
+   15    # Configure the class responsible to send e-mails.
+
+3 matches across 2 files

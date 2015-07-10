@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
+  before_filter :admin?, only: [:index, :edit, :update, :destroy]
   include QuestionsHelper
 
   # GET /questions
