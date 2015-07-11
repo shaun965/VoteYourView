@@ -37,20 +37,20 @@
     Log in if you want to make a comment!!!
     </pre>
     <% end %>
-    </div>
   <% end %>
   </pre>
 
- 
-    <% @comments.each do |b| %>
+  <% @comments.each do |b| %>
 
-    <pre>
+  <pre>
+    Username: <%= User.find_by(id: b.user_id).email %>
+    Comment: <%= b.text %>
+  </pre>
 
-      Username: <%= User.find_by(id: b.user_id).email %>
-      Comment: <%= b.text %>
-    </pre>
+  <% end %>
 
-    <% end %>
+
+
 
 
 

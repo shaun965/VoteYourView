@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+ h4{
+    margin-right: 40px;
+    margin-left: 40px;
+ }
+
+ body{
+  margin-top: 0px;
+ }
+
+ .rightbar{
+  position: fixed;
+  float: right;
+  right: 0;
+  height: 100%;
+  width: 20%;
+  background-color: #2E9AFE;
+ }
+
+ .center{
+  position: relative;
+  width: 80%;
+  float: left;
+ }
+
+ .userinformation{
+  margin: 40px;
+ }
+
+ .Questionfeed{
+  margin-right: 40px;
+  margin-left: 40px;
+  background-color: #2E9AFE;
+  border-color: #fe922e;
+  border-style: solid;
+ }

@@ -9,13 +9,19 @@
 </head>
 <body>
 
-<% if current_user %>
-<%= link_to "Log out", destroy_user_session_path, method: "delete" %>
-<%= link_to "Make questions", new_question_path, method: "get" %>
-<% end %>
-<%= link_to "Sign in", new_user_session_path, method: "get" %>
-<%= link_to "Register", new_user_registration_path, method: "get" %>
-<%= yield %>
+<%= render 'layouts/rightbar' %>
+
+
+<%# if current_user %>
+<%#= link_to "Log out", destroy_user_session_path, method: "delete" %>
+<%#= link_to "Make questions", new_question_path, method: "get" %>
+<%# end %>
+<%#= link_to "Sign in", new_user_session_path, method: "get" %>
+<%#= link_to "Register", new_user_registration_path, method: "get" %>
+
+<div class = "center">
+  <%= yield %>
+</div>
 
 </body>
 </html>
