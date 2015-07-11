@@ -41,6 +41,8 @@
 
   </div>
 
+  <% if current_user %>
+
   <hr>
     <h4>My Recent Questions</h4>
     <% if current_user %>
@@ -54,5 +56,6 @@
   <hr>
 
   <h4>My Recent votes</h4>
+  <% end %>
 
 </div>
