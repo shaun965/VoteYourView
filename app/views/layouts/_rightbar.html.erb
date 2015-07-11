@@ -46,9 +46,14 @@
   <hr>
     <h4>My Recent Questions</h4>
     <% if current_user %>
-      <% Question.all.where(user_id: current_user.id).count.downto (Question.all.count-5) do |a| %>
+      <% (Question.all.where(user_id: current_user.id).count-1).downto (Question.all.where(user_id: current_user.id).count-5) do |a| %>
       <div class = "Questionfeed">
-        <%= link_to Question.all.where(user_id: current_user.id)[a-1].text, question_path(id: Question.all.where(user_id: current_user.id)[a-1] .id.to_s), method: "get" %>
+        <% if current_user.questions.first %>
+          <% if (a >= 0) %>
+            <%= link_to Question.all.where(user_id: current_user.id)[a].text, question_path(id: Question.all.where(user_id: current_user.id)[a].id.to_s), method: "get" %>
+          <% end %>
+        <% end %>
+
       </div>
       <% end %>
     <% end %>
