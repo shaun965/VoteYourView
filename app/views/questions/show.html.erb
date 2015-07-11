@@ -6,7 +6,7 @@
 <pre>
   Posted by user: <%= f.user.email %>
   Question: <%= f.text %>
-  Category: <%= f.category.category %> 
+  Category: <%= f.category.category %>
 
   Yes: <%= f.vote_details.where(yes: true).count %>
   No: <%= f.vote_details.where(yes: false).count %>
@@ -16,7 +16,7 @@
         You have already voted!
 
   <% else %>
-    <%= link_to "Yes", makevote_path(question_id: f.id, yes: true, ip: @ip), method: "post" %>    
+    <%= link_to "Yes", makevote_path(question_id: f.id, yes: true, ip: @ip), method: "post" %>
     <%= link_to "No", makevote_path(question_id: f.id, yes: false, ip: @ip), method: "post" %>
   <% end %>
 
@@ -25,7 +25,7 @@
 
     <% if user_signed_in? %>
       <%= a.label :Comment %>
-      <%= a.text_field :text, class: 'form-control' %>
+      <%= a.text_area :text, class: 'form-control' %>
       </pre>
 
       <%= a.hidden_field :question_id, :value => f.id %>
@@ -56,5 +56,5 @@
 
 
 
-<%#= link_to 'Edit', edit_question_path(@question) %> 
+<%#= link_to 'Edit', edit_question_path(@question) %>
 <%#= link_to 'Back', questions_path %>
