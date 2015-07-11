@@ -1,10 +1,15 @@
 
+<!-- this should probly be application layout too -->
 <h1>Voteyourview.com</h1>
-<% @question.each do |f|%>
+<!-- -->
+
+Sort by: <%= link_to "Most Recent", root_path(sort: "newest"), method: "get" %> <%= link_to "Oldest first", root_path(sort: "oldest"), method: "get" %>
+
+<% @questions.each do |f|%>
   <pre>
   Posted by user: <%= f.user.email %>
   Question: <%= f.text %>
-  Category: <%= f.category.category %> 
+  Category: <%= f.category.category %>
   <%#= Category.where(category_id: f.category_id).category %>
   Yes: <%= f.vote_details.where(yes: true).count %>
   No: <%= f.vote_details.where(yes: false).count %>
@@ -16,11 +21,11 @@
         You have already voted!
 
   <% else %>
-    <%= link_to "Yes", makevote_path(question_id: f.id, yes: true, ip: @ip), method: "post" %>    
+    <%= link_to "Yes", makevote_path(question_id: f.id, yes: true, ip: @ip), method: "post" %>
     <%= link_to "No", makevote_path(question_id: f.id, yes: false, ip: @ip), method: "post" %>
   <% end %>
 
   </pre>
 <% end %>
 
-<h5>&copy 2013-<%= Time.now.year %> voteyourview.com </h5>
+
