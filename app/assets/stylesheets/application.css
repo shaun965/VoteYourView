@@ -11,8 +11,12 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require foundation
  *= require_self
  */
+
+ /*= require foundation */
+
 
  h4{
     margin-right: 40px;
@@ -24,11 +28,10 @@
  }
 
  .rightbar{
-  position: fixed;
+  position: relative;
   float: right;
   right: 0;
   height: 100%;
-  width: 20%;
   background-color: #2E9AFE;
  }
 
@@ -49,3 +52,27 @@
   border-color: #fe922e;
   border-style: solid;
  }
+
+ .QuestionStyle{
+  margin: 1%;
+  background-color: grey;
+ }
+
+
+ .row {
+  margin: 0;
+  max-width: 100%; 
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+

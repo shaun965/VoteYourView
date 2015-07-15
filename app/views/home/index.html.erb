@@ -1,19 +1,26 @@
-
+<a class="left-off-canvas-toggle" href="#" >Menu</a>
 <!-- this should probly be application layout too -->
 <h1>Voteyourview.com</h1>
 <!-- -->
 
-Sort by: <%= link_to "Most Recent", root_path(sort: "newest"), method: "get" %> <%= link_to "Oldest first", root_path(sort: "oldest"), method: "get" %>
+<div class="row">
+  <div class="">
+  Sort by: <%= link_to "Most Recent", root_path(sort: "newest"), method: "get" %> <%= link_to "Oldest first", root_path(sort: "oldest"), method: "get" %> <%= link_to "vote count", root_path(sort: "vote_count"), method: "get" %>
+  </div>
+</div>
 
+<!-- ################### Each Question Div ################ -->
 <% @questions.each do |f|%>
-  <pre>
-  Posted by user: <%= f.user.email %>
-  Question: <%= f.text %>
-  Category: <%= f.category.category %>
-  <%#= Category.where(category_id: f.category_id).category %>
-  Yes: <%= f.vote_details.where(yes: true).count %>
-  No: <%= f.vote_details.where(yes: false).count %>
 
+<div class="row">  
+  <div class="large-8 columns QuestionStyle">
+
+  <h3>Posted by user: <%= f.user.email %></h3>
+  <h3>Question: <%= f.text %></h3>
+  <!-- Category: <%= f.category.category %> -->
+  <%#= Category.where(category_id: f.category_id).category %>
+    Yes: <%= f.vote_details.where(yes: true).count %>
+    No: <%= f.vote_details.where(yes: false).count %>
   <%= link_to "Individual question page", question_path(id: f.id.to_s), method: "get" %>
 
   <% if f.vote_details.where(ip: @ip).exists? %>
@@ -24,8 +31,10 @@ Sort by: <%= link_to "Most Recent", root_path(sort: "newest"), method: "get" %> 
     <%= link_to "Yes", makevote_path(question_id: f.id, yes: true, ip: @ip), method: "post" %>
     <%= link_to "No", makevote_path(question_id: f.id, yes: false, ip: @ip), method: "post" %>
   <% end %>
+  </div>
+</div>
 
-  </pre>
+  
 <% end %>
 
 

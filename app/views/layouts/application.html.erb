@@ -5,27 +5,35 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
+  <!--  Place in <head> to set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
 
-<%= render 'layouts/rightbar' %>
-
-
-<%# if current_user %>
-<%#= link_to "Log out", destroy_user_session_path, method: "delete" %>
-<%#= link_to "Make questions", new_question_path, method: "get" %>
-<%# end %>
-<%#= link_to "Sign in", new_user_session_path, method: "get" %>
-<%#= link_to "Register", new_user_registration_path, method: "get" %>
-
-<div class = "center">
-  <%= yield %>
+    
+<div class="row">
+  <div class="off-canvas-wrap " data-offcanvas> 
+ <% # <%='move-right' unless browser.mobile? %>   
+    <div class="inner-wrap">
+      <%= render 'layouts/leftbar' %>
+      <div class="large-9 columns"><%= yield %></div>
+    </div>
+  </div>
+  <%= render 'layouts/rightbar' %>
 </div>
+
+<div class="row">
+  <div class="large-12 columns">
+  <h5>&copy 2013-<%= Time.now.year %> voteyourview.com </h5>
+  </div>
+</div>
+
+  
+
 
 </body>
 
-<h5>&copy 2013-<%= Time.now.year %> voteyourview.com </h5>
+
 </html>
 
 <script>

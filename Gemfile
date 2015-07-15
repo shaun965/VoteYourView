@@ -28,6 +28,12 @@ gem 'devise'
 gem 'rails_admin'
 gem 'twitter'
 gem 'mandrill_mailer'
+gem 'compass-rails', github: 'Compass/compass-rails', branch: '2-0-stable'
+gem 'zurb-foundation'
+gem 'foundation-rails'
+gem 'jquery-turbolinks'
+gem 'browser'
+
 
 
 # Use ActiveModel has_secure_password

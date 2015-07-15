@@ -8,6 +8,7 @@ class Question
   has_many :comments, dependent: :destroy
 
   field :text,            type: String
+  field :vote_count,      type: Integer
   #field :category,        type: String
 
 
