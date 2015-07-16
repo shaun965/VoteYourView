@@ -12,18 +12,21 @@
 
     
 <div class="row">
-  <div class="off-canvas-wrap " data-offcanvas> 
+  <!-- <div class="off-canvas-wrap " data-offcanvas> -->
  <% # <%='move-right' unless browser.mobile? %>   
-  <div class="inner-wrap">
-    <%= render 'layouts/leftbar' %>
+  <!-- <div class="inner-wrap"> -->
+  <%= render 'layouts/leftbar' %>
+  <%= render 'layouts/rightbar' %>
 
-  <div class="large-9 columns">
+
+  <div class="large-6 columns">
     <%= yield %>
   </div>
-  <%= render 'layouts/rightbar' %>
-    </div>
+
+
 </div>
-</div>
+<!--</div> -->
+<!-- </div> -->
 
 <div class="row">
   <div class="large-12 columns">

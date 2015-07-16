@@ -28,17 +28,27 @@
  }
 
  .rightbar{
-  position: relative;
+  position: fixed;
   float: right;
   right: 0;
   height: 100%;
   background-color: #2E9AFE;
  }
 
+.leftbar{
+  position: fixed;
+  float: left;
+  left: 0;
+  height: 100vh;
+  background-color: #2E9AFE;
+ }
+
+
  .center{
   position: relative;
   width: 80%;
   float: left;
+  left: 0;
  }
 
  .userinformation{
