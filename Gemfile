@@ -33,6 +33,8 @@ gem 'zurb-foundation'
 gem 'foundation-rails'
 gem 'jquery-turbolinks'
 gem 'browser'
+gem 'fotoramajs'
+# gem 'jquery-cdn'
 
 
 

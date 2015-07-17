@@ -13,10 +13,9 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require fotorama
 //= require foundation
 //= require_tree .
-//$(function(){ $(document).foundation({});
-$(function(){ $(document).foundation(); });
 // any other code etc
 //= require turbolinks
 

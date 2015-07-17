@@ -17,11 +17,14 @@
 
  /*= require foundation */
 
-ul.magellan {width: 240px}
-@media only screen and (max-width: 767px) {
-  ul.magellan {position: static !important; width: 100%}
-}
+ label{
+  color: white;
+  font-family: Arial;
+ }
 
+ h2{
+  color: white;
+ }
 
  h4{
     margin-right: 40px;
@@ -37,7 +40,10 @@ ul.magellan {width: 240px}
   float: right;
   right: 0;
   height: 100%;
-  background-color: #2E9AFE;
+  background: -webkit-linear-gradient(#3399ff, #333399); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#3399ff, #333399); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#3399ff, #333399); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#3399ff, #333399); /* Standard syntax */
  }
 
 .leftbar{
@@ -45,7 +51,7 @@ ul.magellan {width: 240px}
   float: left;
   left: 0;
   height: 100%;
-  background-color: #2E9AFE;
+  background-color: #3366cc;
  }
 
 
@@ -79,7 +85,15 @@ ul.magellan {width: 240px}
   width: 100%;
 }
 
+/* ************************** Left side bar ****************************** */
 
+  .squares {
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+
+  }
 
 
 
