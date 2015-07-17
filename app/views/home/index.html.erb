@@ -1,17 +1,29 @@
 
 <div class="row">
-  <div class="large-11 columns">
-  <h1>Voteyourview.com</h1>
+  <div class="large-12 medium-11 columns">
+  <h1>Vote Your View</h1>
   Sort by: <%= link_to "Most Recent", root_path(sort: "newest"), method: "get" %> <%= link_to "Oldest first", root_path(sort: "oldest"), method: "get" %> <%= link_to "vote count", root_path(sort: "vote_count"), method: "get" %>
   </div>
 </div>
 
 <!-- ################### Each Question Div ################ -->
+
+<div class = "row">
+  <div class="large-11 columns fotoramaStyle">
+        <div class="fotorama"
+       data-width="100%"
+      data-ratio="800/500">
+        <img src="http://s.fotorama.io/1.jpg">
+        <img src="http://s.fotorama.io/2.jpg">
+      </div>
+
+  </div>
+</div>
+
 <% @questions.each do |f|%>
 
 <div class="row">  
   <div class="large-11 columns QuestionStyle">
-
   <h3>Posted by user: <%= f.user.email %></h3>
   <h3>Question: <%= f.text %></h3>
   <!-- Category: <%= f.category.category %> -->
