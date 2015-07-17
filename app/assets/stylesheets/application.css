@@ -17,6 +17,11 @@
 
  /*= require foundation */
 
+ul.magellan {width: 240px}
+@media only screen and (max-width: 767px) {
+  ul.magellan {position: static !important; width: 100%}
+}
+
 
  h4{
     margin-right: 40px;
@@ -39,16 +44,15 @@
   position: fixed;
   float: left;
   left: 0;
-  height: 100vh;
+  height: 100%;
   background-color: #2E9AFE;
  }
 
 
  .center{
   position: relative;
-  width: 80%;
   float: left;
-  left: 0;
+  padding-left: 100px;
  }
 
  .userinformation{

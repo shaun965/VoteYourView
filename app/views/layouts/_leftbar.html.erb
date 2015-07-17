@@ -1,66 +1,7 @@
-<div class = "large-3 medium-12 columns leftbar">
-
-  <div class = "userinformation">
-  
-    <% if current_user %>
-      <h3><%= current_user.email %></h3>
-      <%= link_to "Log out", destroy_user_session_path, method: "delete" %>
-      <%= link_to "Make questions", new_question_path, method: "get" %>
-
-    <% else %>
-
-      <h2>Log in</h2>
-
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="field">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true %>
-        </div>
-
-        <div class="field">
-          <%= f.label :password %><br />
-          <%= f.password_field :password, autocomplete: "off" %>
-        </div>
-
-        <% if devise_mapping.rememberable? -%>
-          <div class="field">
-          <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
-          </div>
-        <% end -%>
-
-        <div class="actions">
-        <%= f.submit "Log in" %>
-        </div>
-      <% end %>
-
-    <%= render "devise/shared/links" %>
-  
-    <% end %>
-
-  </div>
-
-  <% if current_user %>
-
-  <hr>
-    <h4>My Recent Questions</h4>
-    <% if current_user %>
-      <% (Question.all.where(user_id: current_user.id).count-1).downto (Question.all.where(user_id: current_user.id).count-5) do |a| %>
-      <div class = "Questionfeed">
-        <% if current_user.questions.first %>
-          <% if (a >= 0) %>
-            <%= link_to Question.all.where(user_id: current_user.id)[a].text, question_path(id: Question.all.where(user_id: current_user.id)[a].id.to_s), method: "get" %>
-          <% end %>
-        <% end %>
-
-      </div>
-      <% end %>
-    <% end %>
-
-  <hr>
-
-  <h4>My Recent votes</h4>
-  <% end %>
+<div class="large-3 columns leftbar">
+  voteyourview
+  hahaha
+  <h1></h1>
 
 </div>
 

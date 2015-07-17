@@ -1,10 +1,7 @@
-<a class="left-off-canvas-toggle" href="#" >Menu</a>
-<!-- this should probly be application layout too -->
-<h1>Voteyourview.com</h1>
-<!-- -->
 
 <div class="row">
-  <div class="">
+  <div class="large-11 columns">
+  <h1>Voteyourview.com</h1>
   Sort by: <%= link_to "Most Recent", root_path(sort: "newest"), method: "get" %> <%= link_to "Oldest first", root_path(sort: "oldest"), method: "get" %> <%= link_to "vote count", root_path(sort: "vote_count"), method: "get" %>
   </div>
 </div>
@@ -13,7 +10,7 @@
 <% @questions.each do |f|%>
 
 <div class="row">  
-  <div class="large-8 columns QuestionStyle">
+  <div class="large-11 columns QuestionStyle">
 
   <h3>Posted by user: <%= f.user.email %></h3>
   <h3>Question: <%= f.text %></h3>

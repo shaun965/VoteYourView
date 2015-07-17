@@ -15,13 +15,27 @@
   <!-- <div class="off-canvas-wrap " data-offcanvas> -->
  <% # <%='move-right' unless browser.mobile? %>   
   <!-- <div class="inner-wrap"> -->
-  <%= render 'layouts/leftbar' %>
-  <%= render 'layouts/rightbar' %>
+  <%#= render 'layouts/leftbar' %>
 
+  <div class="large-9 medium-8 columns">
 
-  <div class="large-6 columns">
-    <%= yield %>
+    <div class="leftbar">
+      <ul>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+      <a href="#" class="open">&rarr;</a>
+    </div>
+
+    <div class = "center">
+      <%= yield %>
+    </div>
+
   </div>
+  <%= render 'layouts/rightbar' %>
 
 
 </div>
