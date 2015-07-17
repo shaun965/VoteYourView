@@ -23,23 +23,27 @@
 <% @questions.each do |f|%>
 
 <div class="row">  
-  <div class="large-11 columns QuestionStyle">
-  <h3>Posted by user: <%= f.user.email %></h3>
-  <h3>Question: <%= f.text %></h3>
+  <div class="large-11 columns">
+    <div class = "QuestionStyle">
+    <div class = "innerwhite">
+      <h3>Posted by user: <%= f.user.email %></h3>
+      <h3>Question: <%= f.text %></h3>
   <!-- Category: <%= f.category.category %> -->
   <%#= Category.where(category_id: f.category_id).category %>
-    Yes: <%= f.vote_details.where(yes: true).count %>
-    No: <%= f.vote_details.where(yes: false).count %>
-  <%= link_to "Individual question page", question_path(id: f.id.to_s), method: "get" %>
+      Yes: <%= f.vote_details.where(yes: true).count %>
+      No: <%= f.vote_details.where(yes: false).count %>
+      <%= link_to "Individual question page", question_path(id: f.id.to_s), method: "get" %>
 
-  <% if f.vote_details.where(ip: @ip).exists? %>
+      <% if f.vote_details.where(ip: @ip).exists? %>
 
         You have already voted!
 
-  <% else %>
-    <%= link_to "Yes", makevote_path(question_id: f.id, yes: true, ip: @ip), method: "post" %>
-    <%= link_to "No", makevote_path(question_id: f.id, yes: false, ip: @ip), method: "post" %>
-  <% end %>
+      <% else %>
+      <%= link_to "Yes", makevote_path(question_id: f.id, yes: true, ip: @ip), method: "post" %>
+      <%= link_to "No", makevote_path(question_id: f.id, yes: false, ip: @ip), method: "post" %>
+      <% end %>
+      </div>
+    </div>
   </div>
 </div>
 
