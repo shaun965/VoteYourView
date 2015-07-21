@@ -30,7 +30,6 @@ class VoteDetailsController < ApplicationController
 
     #if ip address already exists, send back an error message
     
-    
     @vote_detail = VoteDetail.new(vote_detail_params)
 
     respond_to do |format|

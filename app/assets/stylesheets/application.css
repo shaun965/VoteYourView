@@ -17,7 +17,9 @@
 
  /*= require foundation */
 
-
+ .hidden{
+  display: none;
+ }
 
  label{
   color: white;
