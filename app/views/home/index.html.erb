@@ -1,11 +1,3 @@
-<script>
-paintIt = (element, backgroundColor) ->
-  debugger
-  element.style.color = backgroundColor
-
-</script>
-
-
 <div class="row">
   <div class="large-12 medium-11 columns">
   <h1>Vote Your View</h1>
@@ -18,8 +10,8 @@ paintIt = (element, backgroundColor) ->
 <div class = "row">
   <div class="large-11 columns fotoramaStyle">
         <div class="fotorama"
-       data-width="100%"
-      data-ratio="800/500">
+        data-width="100%"
+        data-ratio="800/500">
         <img src="http://s.fotorama.io/1.jpg">
         <img src="http://s.fotorama.io/2.jpg">
       </div>
@@ -41,8 +33,9 @@ paintIt = (element, backgroundColor) ->
       <div class = "noo">No: <div><%= f.vote_details.where(yes: false).count %></div></div> 
 
       <% if f.vote_details.where(ip: @ip).exists? %>
+        <%= link_to "Individual question page", question_path(id: f.id.to_s), method: "get" %>
 
-        You have already voted!
+        <div>You have already voted!</div>
 
       <% else %> 
 
@@ -67,6 +60,8 @@ paintIt = (element, backgroundColor) ->
 
   
 <% end %>
+
+<%= paginate @questions %>
 
 
 <script type="text/javascript"charset="UTF-8">
@@ -97,8 +92,6 @@ paintIt = (element, backgroundColor) ->
   }
 
 */   
-    var d = '<%=@ip%>';
-    var e = '<%=@question_id %>';
 
     $(function () {
       $('.alert').click(function () {
@@ -115,11 +108,11 @@ paintIt = (element, backgroundColor) ->
           var domElement = $( this ).parent().children(".yess").children("div").html();
           var a = parseInt(domElement)+1;
           var b = $( this ).parent().children(".yess").children("div")[0];
-      
+          
          $.ajax({
             type: "post",
             url: "/updateVote",
-            data: {yes: true, ip: d, question_id: questionId },
+            data: {yes: true, question_id: questionId },
             success: function(resp){
               b.innerHTML = a;
               currentDiv.remove();
@@ -137,7 +130,7 @@ paintIt = (element, backgroundColor) ->
           $.ajax({
             type: "post",
             url: "/updateVote",
-            data: {yes: false, ip: d, question_id: questionId },
+            data: {yes: false, question_id: questionId },
             success: function(resp){ 
               b.innerHTML = a;
               currentDiv.remove();

@@ -24,7 +24,7 @@ class HomeController < ApplicationController
       #@questions = @questions.sort! { |a,b| (b.vote_details.count) <=> (a.vote_details.count) }
 
     else
-      @questions = Question.all
+      @questions = Question.all.page params[:page]
     end
 
     @ip = request.remote_ip

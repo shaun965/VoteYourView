@@ -52,6 +52,22 @@
         <% if current_user.questions.first %>
           <% if (a >= 0) %>
             <%= link_to Question.all.where(user_id: current_user.id)[a].text, question_path(id: Question.all.where(user_id: current_user.id)[a].id.to_s), method: "get" %>
+
+
+            <!--                   Method 1     ---------- -->
+            <%# @count = Question.all.where(user_id: current_user.id)[a].vote_details.where(:created_at.gte => current_user.last_sign_in_at).count %>
+
+            <!--                   Method 2     ---------- -->
+            <%# @count = Question.all.where(user_id: current_user.id)[a].vote_details.where(seen: false).count %>
+
+            <!--                   Method 3     ---------- -->
+            <% @count = Question.all.where(user_id: current_user.id)[a].vote_details.count - Question.all.where(user_id: current_user.id)[a].vote_count_last_seen %>
+
+            <div>New votes: <%= @count %></div>
+
+
+
+
           <% end %>
         <% end %>
 

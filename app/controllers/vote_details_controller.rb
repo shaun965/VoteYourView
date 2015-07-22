@@ -30,7 +30,13 @@ class VoteDetailsController < ApplicationController
 
     #if ip address already exists, send back an error message
     
-    @vote_detail = VoteDetail.new(vote_detail_params)
+    @ip = request.remote_ip
+
+    #if Question.find_by(id: vote_detail_params[:question_id]).vote_details.where(ip: @ip).exists?
+    #  render json: {error: 'areadly voted'}
+    #else
+
+    @vote_detail = VoteDetail.new(vote_detail_params.merge(ip: @ip))
 
     respond_to do |format|
       if @vote_detail.save
@@ -75,6 +81,6 @@ class VoteDetailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vote_detail_params
-      params.permit(:question_id, :yes, :ip)
+      params.permit(:question_id, :yes)
     end
 end

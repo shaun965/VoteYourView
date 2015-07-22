@@ -18,6 +18,12 @@ class QuestionsController < ApplicationController
     @comment = Comment.new
     @comments = Comment.all.where(question_id: params[:id])
 
+
+    if current_user = User.find_by(id: @question.user_id)
+      @question.vote_count_last_seen = @question.vote_details.count
+      @question.save
+    end
+
   end
 
   # GET /questions/new
