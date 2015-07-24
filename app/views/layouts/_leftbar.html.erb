@@ -1,14 +1,19 @@
 <div class="leftbar">
+
+<!--  style="display:block" Removed this from <a> tag comment illegal-->
+  <a href=<%= root_url %>>
   <div class = "squares">
   V
   </div>
+  </a>
 
-  <ul>
-    <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li>
-  </ul>
-  <a href="#" class="open">&rarr;</a>
+
+  <% Category.each do |f|%>
+      <%= link_to f.category, category_path(id: f.id.to_s), method: "get" %>
+      <hr>
+
+  <% end %>
+
+  
+
 </div>

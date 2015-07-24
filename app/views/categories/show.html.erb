@@ -1,4 +1,128 @@
-<p id="notice"><%= notice %></p>
+<% @questions.each do |f|%>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<div class="row">  
+  <div class="large-11 columns">
+    <div class = "QuestionStyle">
+    <div class = "innerwhite">
+      <h3>Posted by user: <%= f.user.email %></h3>
+      <h3>Question: <%= f.text %></h3>
+  <!-- Category: <%= f.category.category %> -->
+  <%#= Category.where(category_id: f.category_id).category %>
+      <div class = "yess">Yes: <div><%= f.vote_details.where(yes: true).count %></div></div>
+      <div class = "noo">No: <div><%= f.vote_details.where(yes: false).count %></div></div> 
+
+      <% if f.vote_details.where(ip: @ip).exists? %>
+        <%= link_to "Individual question page", question_path(id: f.id.to_s), method: "get" %>
+
+        <div>You have already voted!</div>
+
+      <% else %> 
+
+      <a href="javascript:void(0)" class = "alert yesss">yes</a>
+      <div class = "hidden"><%= f.id %></div>
+      <a href="javascript:void(0)" class = "alert nooo">no</a>
+      <div class = "hidden"><%= f.id %></div>
+      <%= link_to "Individual question page", question_path(id: f.id.to_s), method: "get" %>
+
+      <% end %>
+
+      <!--
+      !!!!!!!!!!!!!!!!!!!!!!!!!!Old code might be useful !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      <%= link_to "Yes", makevote_path(question_id: f.id, yes: true, ip: @ip), method: "post" %>
+      <%= link_to "No", makevote_path(question_id: f.id, yes: false, ip: @ip), method: "post" %>
+      -->
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+<% end %>
+
+<%= paginate @questions %>
+
+
+<script type="text/javascript"charset="UTF-8">
+
+
+/*
+
+  function DoAction(question_id, ipAddress){
+    $(document).ready(function(){
+      debugger
+
+        if ($(this).attr('class') == "alert yesss")
+        {
+          console.log("success");
+          var domElement = $( this ).parent().children(".yess").children("div").html();
+          var a = parseInt(domElement)+1;
+          $( this ).parent().children(".yess").children("div")[0].innerHTML = a;
+         
+          debugger;
+         $.ajax({
+            type: "post",
+            url: "/updateVote",
+            data: {yes: true, ip: ipAddress, question_id: question_id },
+              success: function(resp){ console.log("success")}
+          });}
+            
+        });
+  }
+
+*/   
+
+    $(function () {
+      $('.alert').click(function () {
+
+        var questionId = $( this ).next().html();
+        var currentDiv = $( this )[0]
+        var yesDiv = $( this ).parent().children(".yesss")[0];
+        var noDiv = $( this ).parent().children(".nooo")[0];
+        
+
+        if ($(this).attr('class') == "alert yesss")
+        {
+
+          var domElement = $( this ).parent().children(".yess").children("div").html();
+          var a = parseInt(domElement)+1;
+          var b = $( this ).parent().children(".yess").children("div")[0];
+          
+         $.ajax({
+            type: "post",
+            url: "/updateVote",
+            data: {yes: true, question_id: questionId },
+            success: function(resp){
+              b.innerHTML = a;
+              currentDiv.remove();
+              noDiv.remove();
+            }
+
+          });
+        }
+        else        
+        {
+          var domElement = $( this ).parent().children(".noo").children("div").html();
+          var a = parseInt(domElement)+1;
+          var b = $( this ).parent().children(".noo").children("div")[0];
+
+          $.ajax({
+            type: "post",
+            url: "/updateVote",
+            data: {yes: false, question_id: questionId },
+            success: function(resp){ 
+              b.innerHTML = a;
+              currentDiv.remove();
+              yesDiv.remove();
+            }
+          });
+
+        }
+
+      })
+    });
+
+  </script>
+
+
+

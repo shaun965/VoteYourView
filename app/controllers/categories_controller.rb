@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-  before_filter :admin?
+  before_filter :admin?, only: [:index, :new, :create, :edit, :update, :destroy]
 
   # GET /categories
   # GET /categories.json
@@ -11,6 +11,9 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @questions = Question.all.where(category_id: params[:id])
+    @questions = Kaminari.paginate_array(@questions).page(params[:page]).per(10)
+    @ip = request.remote_ip
   end
 
   # GET /categories/new
