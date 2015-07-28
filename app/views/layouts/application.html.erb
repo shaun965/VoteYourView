@@ -17,6 +17,11 @@
   <!-- <div class="off-canvas-wrap " data-offcanvas> -->
  <% # <%='move-right' unless browser.mobile? %>   
   <!-- <div class="inner-wrap"> -->
+
+  <% if browser.mobile? %>
+    <%= render 'layouts/rightbar' %>
+  <% end %>
+
   <div class="large-9 medium-8 columns">
     <%= render 'layouts/leftbar' %>
     <div class = "center">
@@ -26,7 +31,10 @@
     
 
   </div>
-  <%= render 'layouts/rightbar' %>
+
+  <% if !browser.mobile? %>
+    <%= render 'layouts/rightbar' %>
+  <% end %>
 
 
 </div>

@@ -15,7 +15,7 @@
  *= require_self
  */
 
- /*= require foundation */
+
 
  .hidden{
   display: none;
@@ -110,6 +110,22 @@
     color: white;
     text-decoration: none;
     font-size: 30px;
+
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .rightbar { 
+      position: relative; 
+    }
+
+    .leftbar{
+      display: none;
+    }
+
+    .center{
+      padding-left: 0;
+    }
 
   }
 

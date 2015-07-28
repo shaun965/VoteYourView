@@ -13,6 +13,18 @@ Rails.application.routes.draw do
 
   post 'updateVote' => 'vote_details#create', as: :makevote
 
+
+  namespace :api do
+    get 'questions' => 'questions#index'
+    get 'questions/:id' => 'questions#show'
+    # get 'questions/:id' => 
+    post 'makeComment' => 'comments#create'
+    post 'sign_in'  => 'sessions#create', as: :api_sign_in
+    # delete 'sign_out'
+    # post 'register'
+    # post 'question'
+    post 'updateVote' => 'vote_details#create', as: :makevote
+  end
   # post 'updateComment' => 'comments#create', as: :makecomment
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

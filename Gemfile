@@ -34,6 +34,8 @@ gem 'foundation-rails'
 gem 'jquery-turbolinks'
 gem 'browser'
 gem 'kaminari'
+gem 'simple_token_authentication', '~> 1.0' 
+gem 'thin'
 
 
 # gem 'jquery-cdn'
