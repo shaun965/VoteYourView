@@ -35,7 +35,10 @@ gem 'jquery-turbolinks'
 gem 'browser'
 gem 'kaminari'
 gem 'simple_token_authentication', '~> 1.0' 
-gem 'thin'
+gem 'thin'  
+gem "font-awesome-rails"
+
+
 
 
 # gem 'jquery-cdn'

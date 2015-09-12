@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require fotorama
 //= require foundation
+//= require jquery.tooltipster.min.js
 //= require_tree .
 // any other code etc
 //= require turbolinks

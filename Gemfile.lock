@@ -296,6 +296,7 @@ DEPENDENCIES
   compass-rails!
   devise
   dotenv-rails
+  font-awesome-rails
   foundation-rails
   jbuilder (~> 2.0)
   jquery-rails

@@ -13,6 +13,8 @@
  *= require_tree .
  *= require foundation
  *= require_self
+ *= require font-awesome
+ *= require tooltipster
  */
 
 
@@ -60,7 +62,15 @@
 
 
  .center{
-  padding-left: 100px;
+  padding-left: 62px;
+  /*background-color: #87CEFA;
+  /*background-color: rgba(102, 153, 255, 1);*/
+  background-color: rgba(135, 206, 255, 0);
+
+  /*background: -webkit-linear-gradient(white, #87CEFA); /* For Safari 5.1 to 6.0 */
+  /*background: -o-linear-gradient(white, #87CEFA); /* For Opera 11.1 to 12.0 */
+  /*background: -moz-linear-gradient(white, #87CEFA); /* For Firefox 3.6 to 15 */
+  /*background: linear-gradient(white, #87CEFA); /* Standard syntax */
  }
 
  .userinformation{
@@ -106,10 +116,12 @@
 /* ************************** Left side bar ****************************** */
 
   .squares {
-    margin: 20px;
+    margin: 5px;
+    margin-top: 15px;
     color: white;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 20px;
+    position: relative;
 
   }
 
@@ -128,6 +140,51 @@
     }
 
   }
+
+a.zz i{
+  color: #000066;
+}
+
+.fa {
+   color: #000066;
+}
+
+.squares:hover .fa{
+  color:white;
+}
+
+.tooltip {
+  position: relative;
+  background: transparent;
+  padding: 0;
+  display: table-header-group;
+}
+
+
+.top-bar{
+/* IE10+ */ 
+background-image: -ms-linear-gradient(top, #3366CC 0%, #207CCA 50%, #2D95EB 75%, #89CBFF 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #3366CC 0%, #207CCA 50%, #2D95EB 75%, #89CBFF 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(top, #3366CC 0%, #207CCA 50%, #2D95EB 75%, #89CBFF 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3366CC), color-stop(50, #207CCA), color-stop(75, #2D95EB), color-stop(100, #89CBFF));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #3366CC 0%, #207CCA 50%, #2D95EB 75%, #89CBFF 100%);
+
+/* W3C Markup */ 
+background-image: linear-gradient(to bottom, #3366CC 0%, #207CCA 50%, #2D95EB 75%, #89CBFF 100%);
+  height: 150px;
+  padding: 0;
+  margin: 0;
+}
+
+
 
 
 

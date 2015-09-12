@@ -3,6 +3,8 @@ class QuestionsController < ApplicationController
   before_filter :admin?, only: [:index, :edit, :update, :destroy]
   include QuestionsHelper
 
+  
+
   # GET /questions
   # GET /questions.json
   def index

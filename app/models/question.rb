@@ -8,6 +8,9 @@ class Question
   has_many :comments, dependent: :destroy
   paginates_per 10
 
+  acts_as_token_authenticatable
+  field :authentication_token
+
   field :text,            type: String
   field :vote_count,      type: Integer
   field :vote_count_last_seen,    type: Integer, default: 0

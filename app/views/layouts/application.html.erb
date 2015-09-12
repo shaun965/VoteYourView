@@ -9,6 +9,14 @@
   <%#= include_fotorama %>
   <!--  Place in <head> to set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href='https://fonts.googleapis.com/css?family=Erica+One' rel='stylesheet' type='text/css'>
+
+  <!-- ################################# Tooltip ##########################-->
+  <script>
+        $(document).ready(function() {
+            $('.tooltip').tooltipster();
+        });
+  </script>        
 </head>
 <body>
 
@@ -22,7 +30,7 @@
     <%= render 'layouts/rightbar' %>
   <% end %>
 
-  <div class="large-9 medium-8 columns">
+  <div class="large-9 medium-12 small-12 columns" style = "padding: 0;">
     <%= render 'layouts/leftbar' %>
     <div class = "center">
 
@@ -56,7 +64,9 @@
 </html>
 
 <script>
-   $(function(){ $(document).foundation({});
+   $(function(){ $(document).foundation({})});
+
+
 </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

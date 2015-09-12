@@ -17,12 +17,12 @@ Rails.application.routes.draw do
   namespace :api do
     get 'questions' => 'questions#index'
     get 'questions/:id' => 'questions#show'
+    post 'questions' => 'questions#create', as: :api_question_create
     # get 'questions/:id' => 
     post 'makeComment' => 'comments#create'
     post 'sign_in'  => 'sessions#create', as: :api_sign_in
-    # delete 'sign_out'
-    # post 'register'
-    # post 'question'
+    delete 'sign_out' => 'sessions#destroy', as: :api_sign_out
+    post 'register' => 'users#create', as: :api_user_create
     post 'updateVote' => 'vote_details#create', as: :makevote
   end
   # post 'updateComment' => 'comments#create', as: :makecomment
