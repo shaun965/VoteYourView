@@ -149,7 +149,7 @@ a.zz i{
    color: #000066;
 }
 
-.squares:hover .fa{
+.tooltip:hover .fa{
   color:white;
 }
 
@@ -182,6 +182,19 @@ background-image: linear-gradient(to bottom, #3366CC 0%, #207CCA 50%, #2D95EB 75
   height: 150px;
   padding: 0;
   margin: 0;
+}
+
+.mobileCategory{
+  height: 35px;
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.question_blue_bar{
+  font-size: 1em;
+  color: white;
+  margin-top: 7px;
 }
 
 

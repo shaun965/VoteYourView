@@ -5,9 +5,6 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%#= include_jquery %>
-  <%#= include_fotorama %>
-  <!--  Place in <head> to set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href='https://fonts.googleapis.com/css?family=Erica+One' rel='stylesheet' type='text/css'>
 
@@ -22,35 +19,30 @@
 
     
 <div class="row">
-  <!-- <div class="off-canvas-wrap " data-offcanvas> -->
- <% # <%='move-right' unless browser.mobile? %>   
-  <!-- <div class="inner-wrap"> -->
 
   <% if browser.mobile? %>
-    <%= render 'layouts/rightbar' %>
-  <% end %>
-
-  <div class="large-9 medium-12 small-12 columns" style = "padding: 0;">
-    <%= render 'layouts/leftbar' %>
-    <div class = "center">
-
-      <%= yield %>
+    <div class="large-12 medium-12 small-12 columns" style = "padding: 0;">
+      <div class = "center">
+        <%= render 'layouts/navbar' %>        
+        <%= yield %>
+      </div>
     </div>
-    
 
-  </div>
-
-  <% if !browser.mobile? %>
+  <% else %>
+    <div class="large-9 medium-12 small-12 columns" style = "padding: 0;">
+      <%= render 'layouts/leftbar' %>
+      <div class = "center">
+        <%= render 'layouts/navbar' %>
+        <%= yield %>
+      </div>
+    </div>
     <%= render 'layouts/rightbar' %>
   <% end %>
-
-
 </div>
-<!--</div> -->
-<!-- </div> -->
+
 
 <div class="row">
-  <div class="large-10 columns" style="margin-left: 100px;">
+  <div class="large-10 columns" style="padding-left: 100px;">
   <h5>&copy 2013-<%= Time.now.year %> voteyourview.com </h5>
   </div>
 </div>

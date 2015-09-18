@@ -20,3 +20,54 @@
 // any other code etc
 //= require turbolinks
 
+
+    $(function () {
+      $('.alert').click(function () {
+
+        var questionId = $( this ).next().html();
+        var currentDiv = $( this )[0]
+        var yesDiv = $( this ).parent().children(".yesss")[0];
+        var noDiv = $( this ).parent().children(".nooo")[0];
+        
+
+        if ($(this).attr('class') == "alert yesss")
+        {
+
+          var domElement = $( this ).parent().children(".yess").children("div").html();
+          var a = parseInt(domElement)+1;
+          var b = $( this ).parent().children(".yess").children("div")[0];
+          
+         $.ajax({
+            type: "post",
+            url: "/updateVote",
+            data: {yes: true, question_id: questionId },
+            success: function(resp){
+              b.innerHTML = a;
+              currentDiv.remove();
+              noDiv.remove();
+            }
+
+          });
+        }
+        else        
+        {
+          var domElement = $( this ).parent().children(".noo").children("div").html();
+          var a = parseInt(domElement)+1;
+          var b = $( this ).parent().children(".noo").children("div")[0];
+
+          $.ajax({
+            type: "post",
+            url: "/updateVote",
+            data: {yes: false, question_id: questionId },
+            success: function(resp){ 
+              b.innerHTML = a;
+              currentDiv.remove();
+              yesDiv.remove();
+            }
+          });
+
+        }
+
+      })
+    });
+

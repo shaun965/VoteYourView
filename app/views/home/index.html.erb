@@ -5,18 +5,61 @@
   </div>
 </div> -->
 
-<!-- #######################Nav bar ##################### -->
-    <div class="contain-to-grid">
-      <nav class="top-bar" data-topbar role="navigation">
-        <!-- <div class = "row" style="margin: 0; height: 40px; border-bottom-style: solid; border-color: white;">
-        </div> -->
-        <div class = "row" style="padding-left:50px; padding-top:30px; margin:0;">
-          <img src="/images/vyvlogo.png"></img>
-        </div>
-      </nav>
-    </div>
-<!-- ################### Each Question Div ################ -->
 
+<!-- ####################### normal = orbit, mobile = category ##################### -->
+
+  <% if browser.mobile? %>
+    <!-- ####################### Categories ##################### -->
+      <div class = "row" style="margin: 0;">
+        <div class = "large-12 medium-12 small-12 columns mobileCategory" style="background-color: orange;">
+          <%= link_to category_path(id: Category.find_by(category: "Arts").id.to_s) do %>
+            <div>ARTS</div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class = "row" style="margin: 0;">
+        <div class = "large-12 medium-12 small-12 columns mobileCategory" style="background-color: yellow;">
+          <%= link_to category_path(id: Category.find_by(category: "Sports").id.to_s) do %>
+            <div>SPORTS</div>
+          <% end %>
+        </div>
+      </div>      
+
+      <div class = "row" style="margin: 0;">
+        <div class = "large-12 medium-12 small-12 columns mobileCategory" style="background-color: #2D95EB;">
+          <%= link_to category_path(id: Category.find_by(category: "Knowledge").id.to_s) do %>
+            <div style = "color: white;">KNOWLEDGE</div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class = "row" style="margin: 0;">
+        <div class = "large-12 medium-12 small-12 columns mobileCategory" style="background-color: orange;">
+          <%= link_to category_path(id: Category.find_by(category: "Politics").id.to_s) do %>
+            <div>POLITICS</div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class = "row" style="margin: 0;">
+        <div class = "large-12 medium-12 small-12 columns mobileCategory" style="background-color: #2D95EB;">
+          <%= link_to category_path(id: Category.find_by(category: "Entertainment").id.to_s) do %>
+            <div style = "color: white;">ENTERTAINMENT</div>
+          <% end %>
+        </div>
+      </div>        
+
+      <div class = "row" style="margin: 0;">
+        <div class = "large-12 medium-12 small-12 columns mobileCategory" style="background-color: yellow;">
+          <%= link_to category_path(id: Category.find_by(category: "Random").id.to_s) do %>
+            <div>RANDOM</div>
+          <% end %>
+        </div>
+      </div> 
+
+  <% else %>
+<!-- ################### Picture Orbit ################ -->
 
 <ul class="example-orbit" data-orbit>
   <li>
@@ -33,45 +76,50 @@
   </li>
 </ul> 
 
+<% end %>
+
+<!-- ################### Each Question Div ################ -->
+
 <% @questions.each do |f|%>
 
 <div class="row" style="margin:0; padding: 5px 30px 30px 30px;">  
   <div class="large-12 columns">
+
+  <!-- ################### Top blue part ################ -->
+
     <div class = "row">
       <div class = "large-12 columns" style="background-color: #2D95EB; height: 40px; border-radius: 6px; -moz-border-radius: 6px;">
+        <div class = "question_blue_bar">Posted at: <%= f.created_at.strftime("%b %d, %Y") %></div>
       </div>
     </div>
+
+  <!-- ################### White space ################ -->
 
     <div class = "row">
       <div class = "large-12 columns" style="background-color: white; height: 10px;">
       </div>
     </div>
     
+   <!-- ################### Main section ################ -->
+ 
     <div class = "row" style="background-color: #e4e4e4;">
-    <div class = "large-12 columns">
-    <!-- div class = "QuestionStyle" -->
-    <!-- div class = "innerwhite" -->
-      <h3>Posted by user: <%= f.user.email %></h3>
-      <h3>Question: <%= f.text %></h3>
-  <!-- Category: <%= f.category.category %> -->
-  <%#= Category.where(category_id: f.category_id).category %>
-      <div class = "yess">Yes: <div><%= f.vote_details.where(yes: true).count %></div></div>
-      <div class = "noo">No: <div><%= f.vote_details.where(yes: false).count %></div></div> 
+      <div class = "large-12 columns">
+        <h3>Posted by user: <%= f.user.email %></h3>
+        <h3>Question: <%= f.text %></h3>
+        <div class = "yess">Yes: <div><%= f.vote_details.where(yes: true).count %></div></div>
+        <div class = "noo">No: <div><%= f.vote_details.where(yes: false).count %></div></div> 
 
-      <% if f.vote_details.where(ip: @ip).exists? %>
+        <% if f.vote_details.where(ip: @ip).exists? %>
+          <div>You have already voted!</div>
+        <% else %> 
+          <a href="javascript:void(0)" class = "alert yesss">yes</a>
+          <div class = "hidden"><%= f.id %></div>
+          <a href="javascript:void(0)" class = "alert nooo">no</a>
+          <div class = "hidden"><%= f.id %></div>
+        <% end %>
+
         <%= link_to "Individual question page", question_path(id: f.id.to_s), method: "get" %>
 
-        <div>You have already voted!</div>
-
-      <% else %> 
-
-      <a href="javascript:void(0)" class = "alert yesss">yes</a>
-      <div class = "hidden"><%= f.id %></div>
-      <a href="javascript:void(0)" class = "alert nooo">no</a>
-      <div class = "hidden"><%= f.id %></div>
-      <%= link_to "Individual question page", question_path(id: f.id.to_s), method: "get" %>
-
-      <% end %>
 
       <!--
       !!!!!!!!!!!!!!!!!!!!!!!!!!Old code might be useful !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -79,97 +127,20 @@
       <%= link_to "No", makevote_path(question_id: f.id, yes: false, ip: @ip), method: "post" %>
       -->
       </div>
-      </div>
+    </div>
+
+  <!-- ################### Main section end ################ -->
+
   </div>
 </div>
-
-  
 <% end %>
+
+<!-- ################### Question div end ################ -->
+
 
 <%= paginate @questions %>
 
 
-<script type="text/javascript"charset="UTF-8">
-
-
-/*
-
-  function DoAction(question_id, ipAddress){
-    $(document).ready(function(){
-      debugger
-
-        if ($(this).attr('class') == "alert yesss")
-        {
-          console.log("success");
-          var domElement = $( this ).parent().children(".yess").children("div").html();
-          var a = parseInt(domElement)+1;
-          $( this ).parent().children(".yess").children("div")[0].innerHTML = a;
-         
-          debugger;
-         $.ajax({
-            type: "post",
-            url: "/updateVote",
-            data: {yes: true, ip: ipAddress, question_id: question_id },
-              success: function(resp){ console.log("success")}
-          });}
-            
-        });
-  }
-
-*/   
-
-
-    $(function () {
-      $('.alert').click(function () {
-
-        var questionId = $( this ).next().html();
-        var currentDiv = $( this )[0]
-        var yesDiv = $( this ).parent().children(".yesss")[0];
-        var noDiv = $( this ).parent().children(".nooo")[0];
-        
-
-        if ($(this).attr('class') == "alert yesss")
-        {
-
-          var domElement = $( this ).parent().children(".yess").children("div").html();
-          var a = parseInt(domElement)+1;
-          var b = $( this ).parent().children(".yess").children("div")[0];
-          
-         $.ajax({
-            type: "post",
-            url: "/updateVote",
-            data: {yes: true, question_id: questionId },
-            success: function(resp){
-              b.innerHTML = a;
-              currentDiv.remove();
-              noDiv.remove();
-            }
-
-          });
-        }
-        else        
-        {
-          var domElement = $( this ).parent().children(".noo").children("div").html();
-          var a = parseInt(domElement)+1;
-          var b = $( this ).parent().children(".noo").children("div")[0];
-
-          $.ajax({
-            type: "post",
-            url: "/updateVote",
-            data: {yes: false, question_id: questionId },
-            success: function(resp){ 
-              b.innerHTML = a;
-              currentDiv.remove();
-              yesDiv.remove();
-            }
-          });
-
-        }
-
-      })
-    });
-
-  </script>
 
 
 

@@ -1,9 +1,25 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 
 <% f = @question %>
 
 
-<pre>
+<div class="row" style="margin:0; padding: 5px 30px 30px 30px; position: relative;">  
+  <div class="large-12 columns">
+    <div class = "row">
+      <div class = "large-12 columns" style="background-color: #2D95EB; height: 40px; border-radius: 6px; -moz-border-radius: 6px;">
+        <div class = "question_blue_bar">Posted at: <%= if f.created_at!=nil f.created_at.strftime("%b %d, %Y") end %></div>
+      </div>
+    </div>
+
+    <div class = "row">
+      <div class = "large-12 columns" style="background-color: white; height: 10px;">
+      </div>
+    </div>
+    
+    <div class = "row" style="background-color: #e4e4e4;">
+    <div class = "large-12 columns">
+
+
   Posted by user: <%= f.user.email %>
   Question: <%= f.text %>
   Category: <%= f.category.category %>
@@ -19,9 +35,15 @@
     <%= link_to "Yes", makevote_path(question_id: f.id, yes: true, ip: @ip), method: "post" %>
     <%= link_to "No", makevote_path(question_id: f.id, yes: false, ip: @ip), method: "post" %>
   <% end %>
+  </div>
+  </div>
+  </div>
+  </div>
+
+<!--
 
   <%= form_for(@comment) do |a| %>
-  <div class="actions">
+  <div class="actions" style = "position: absolute;">
 
     <% if user_signed_in? %>
       <%= a.label :Comment %>
@@ -49,6 +71,7 @@
 
   <% end %>
 
+-->
 
 
 
