@@ -56,7 +56,12 @@
             <div>RANDOM</div>
           <% end %>
         </div>
-      </div> 
+      </div>
+
+      <div class = "row" style="margin: 0;">
+        <div class = "large-12 medium-12 small-12 columns" style="background-color: white; height: 20px;">
+        </div>
+      </div>       
 
   <% else %>
 <!-- ################### Picture Orbit ################ -->
@@ -82,7 +87,11 @@
 
 <% @questions.each do |f|%>
 
-<div class="row" style="margin:0; padding: 5px 30px 30px 30px;">  
+<% if browser.mobile? %>
+  <div class="row" style="margin:0; padding: 20px 5px 5px 5px;">  
+<% else %>
+  <div class="row" style="margin:0; padding: 5px 30px 30px 30px;">  
+<% end %>
   <div class="large-12 columns">
 
   <!-- ################### Top blue part ################ -->
