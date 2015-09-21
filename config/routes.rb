@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   root 'home#index'
 
   post 'updateVote' => 'vote_details#create', as: :makevote
+  get 'users' => 'home#index'
+
 
 
   namespace :api do

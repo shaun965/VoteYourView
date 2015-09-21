@@ -2,7 +2,11 @@
 
 <% @questions.each do |f|%>
 
-<div class="row" style="margin:0; padding: 5px 30px 30px 30px;">  
+<% if browser.mobile? %>
+  <div class="row" style="margin:0; padding: 20px 5px 5px 5px;">  
+<% else %>
+  <div class="row" style="margin:0; padding: 5px 30px 30px 30px;">  
+<% end %>
   <div class="large-12 columns">
 
     <!-- ################### Top blue part ################ -->

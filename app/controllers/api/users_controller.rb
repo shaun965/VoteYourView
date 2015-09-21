@@ -9,6 +9,7 @@ class Api::UsersController < Api::ApiController
     
     user = User.create(email: params[:email], password: params[:password])
     render json: {message: "Congradulation, you have successfully registered!"}
+    redirect_to :root
 
   end
 

@@ -24,7 +24,7 @@
  }
 
  label{
-  color: white;
+  color: black;
   font-family: Arial;
  }
 
@@ -197,6 +197,9 @@ background-image: linear-gradient(to bottom, #3366CC 0%, #207CCA 50%, #2D95EB 75
   margin-top: 7px;
 }
 
+.front_page_label{
+  color: white;
+}
 
 
 
